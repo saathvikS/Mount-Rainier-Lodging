@@ -1,0 +1,731 @@
+{
+  "platform": "react",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "files",
+    "publicDir": "../../public",
+    "publicUrlPrefix": "/static/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "src/components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "5dGW8Awro3qq8Hh5MveXLP",
+      "projectApiToken": "wVHvHSTRyoO1MQddr5ypmW8AfwiMMy7h0Iaj4Q2YmYLLEo2A4L6pLn8Fydm8wQkTAJV9uAD5bJPo8bmGg",
+      "projectName": "lottie-react",
+      "version": "1.8.0",
+      "cssFilePath": "plasmic/lottie_react/plasmic_lottie_react.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "BPNsJ2qis6",
+          "name": "LottieWrapper",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        }
+      ]
+    },
+    {
+      "projectId": "eiC1VCbma8t6iMexZerqLa",
+      "projectApiToken": "2xfpaNVhKMubqhWULgUJXE6dh9lqU7JPaJrwLSo0F2Q5glfikXrdfgNuO68djChRFw10Qyz0zKEZ6MkrLGVQ",
+      "projectName": "commerce-swell",
+      "version": "5.9.0",
+      "cssFilePath": "plasmic/commerce_swell/plasmic_commerce_swell.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/commerce_swell/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "tbDZqxoBkbo",
+          "name": "CommerceProviderComponent",
+          "componentImportPath": "@plasmicpkgs/commerce-swell"
+        }
+      ]
+    },
+    {
+      "projectId": "xp1p7dmg329XVLHyuEUxD2",
+      "projectApiToken": "lKmNlwaV4Oj0MW88hxVZ5o5DRgZ8MIE6XICXwHEIus3QTO9JqH6779kr2KkJg7S816qbjShlBQ8PzLYAK4Q",
+      "projectName": "commerce",
+      "version": "11.10.0",
+      "cssFilePath": "plasmic/commerce/plasmic_commerce.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "vU2jzVAnFP",
+          "name": "ProductCollection",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "S1F4q0wN6b",
+          "name": "ProductTextField",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "_PaJxGc8gf",
+          "name": "ProductPriceComponent",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "qpULM0wwWW",
+          "name": "ProductMedia",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "NR7KYUJmEqx",
+          "name": "AddToCartButton",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "CjfQQrwiHjD",
+          "name": "ProductQuantity",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "i3vHZr7erKX",
+          "name": "ProductVariantPicker",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "UGhhaf1AiUhF",
+          "name": "CartComponent",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "1gYJf_XBZUAD",
+          "name": "ProductBox",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "t362fgW6eiCe",
+          "name": "ProductLink",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "ny07p45F84c_",
+          "name": "CategoryCollection",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "hzqiq--xdG5T",
+          "name": "CategoryField",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "fA0CIfqZOwRH",
+          "name": "CategoryLink",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "5k_ZYl4EkcYi",
+          "name": "ProductSlider",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "yOXBNIAJxzUq",
+          "name": "CategoryMedia",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        },
+        {
+          "id": "a5BakxYc5Db_",
+          "name": "ProductMediaCollection",
+          "componentImportPath": "@plasmicpkgs/commerce"
+        }
+      ]
+    },
+    {
+      "projectId": "84wxoth5npGrp6RRXPL88z",
+      "projectApiToken": "hOzXksPB8gkTrKnfJeV9VDS8m8dnIXQn1xxDQZ5MHxv9orQY6JNgwmk6aDMZPLkocV2KtD9gNJXv5JwIbbzIQ",
+      "projectName": "react-scroll-parallax-global",
+      "version": "4.8.0",
+      "cssFilePath": "plasmic/react_scroll_parallax_global/plasmic_react_scroll_parallax_global.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/react_scroll_parallax_global/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "bozP4lLlAZ",
+          "name": "ParallaxWrapper",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
+        },
+        {
+          "id": "L6MfauX2Cw",
+          "name": "ParallaxProviderWrapper",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
+        }
+      ]
+    },
+    {
+      "projectId": "szjgMQpPpxhmkjnaBvZQJG",
+      "projectApiToken": "xBIsrWHdWZ9kVgFEGUt29LOZPWfm0XidYqRHqPhQXsEjDHevjIbp44nEYMIZ46YOoxrN8anfXjreTkDtFjTA",
+      "projectName": "react-parallax-tilt",
+      "version": "2.8.0",
+      "cssFilePath": "plasmic/react_parallax_tilt/plasmic_react_parallax_tilt.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "PfY466VIuq",
+          "name": "Tilt",
+          "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
+        }
+      ]
+    },
+    {
+      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
+      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectName": "react-awesome-reveal",
+      "version": "3.8.0",
+      "cssFilePath": "plasmic/react_awesome_reveal/plasmic_react_awesome_reveal.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "R6s1FdhksG",
+          "name": "Reveal",
+          "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
+        }
+      ]
+    },
+    {
+      "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
+      "projectApiToken": "3n3SKEMyDjMJptsNvaK6yxRaa8PAgqwkfIhRbKT4ZG9SobeM3Kb5rE2pSYmbR338Z5p6vBTScOAnptZwGSbQ",
+      "projectName": "react-youtube",
+      "version": "4.8.0",
+      "cssFilePath": "plasmic/react_youtube/plasmic_react_youtube.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CHO21V9uYw",
+          "name": "YouTube",
+          "componentImportPath": "@plasmicpkgs/react-youtube"
+        }
+      ]
+    },
+    {
+      "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
+      "projectApiToken": "vXGGQpdi9fhcncabBdg8DcMRUbkz0iRW6HS1jzQufQR6QH0MasPwr9SX7ap4SsK3xXwwXmzZtglWGe0Rm2nw",
+      "projectName": "plasmic-basic-components",
+      "version": "3.11.0",
+      "cssFilePath": "plasmic/plasmic_basic_components/plasmic_plasmic_basic_components.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "CMDBvOhaI4s",
+          "name": "Iframe",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "RhitNJW5Zu-",
+          "name": "Video",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "PKldDYkH42",
+          "name": "Embed",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "D4RbnlpRXg3",
+          "name": "DataProvider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ]
+    },
+    {
+      "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+      "projectApiToken": "skczbM1Q9KfclX7Mr3SHsfQIaZFMCQCdXZ4clZucPFZQg9DgVzJUpPqdqthkSC7U35NPm1BY64dlUo6TCA",
+      "projectName": "Mount Rainier Lodging",
+      "version": "latest",
+      "cssFilePath": "plasmic/mount_rainier_lodging/plasmic_mount_rainier_lodging.module.css",
+      "components": [
+        {
+          "id": "5NWFVBf1bMUV",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "Homepage.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "0GSRDNreqxvH",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        },
+        {
+          "id": "BPdr9UnkUGcde",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
+        },
+        {
+          "id": "iSh5ehqohY",
+          "name": "NavBarButtons",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicNavBarButtons.tsx",
+          "importSpec": {
+            "modulePath": "NavBarButtons.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicNavBarButtons.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "wd5nAohZ5Tw",
+          "name": "Rooms",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicRooms.tsx",
+          "importSpec": {
+            "modulePath": "Rooms.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicRooms.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "8y0EWuFHRBh",
+          "name": "Activities",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicActivities.tsx",
+          "importSpec": {
+            "modulePath": "Activities.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicActivities.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "6tEZDIlQ3KL",
+          "name": "AboutUs",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicAboutUs.tsx",
+          "importSpec": {
+            "modulePath": "AboutUs.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicAboutUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "1afyPt5Gh0q",
+          "name": "NavBar",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicNavBar.tsx",
+          "importSpec": {
+            "modulePath": "NavBar.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicNavBar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "yJQJQRQE7L",
+          "name": "Room",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicRoom.tsx",
+          "importSpec": {
+            "modulePath": "Room.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicRoom.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "IDlLfPVadLh",
+          "name": "Footer",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicFooter.tsx",
+          "importSpec": {
+            "modulePath": "Footer.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicFooter.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "rDEJujvel4T",
+          "name": "FooterBottom",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicFooterBottom.tsx",
+          "importSpec": {
+            "modulePath": "FooterBottom.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicFooterBottom.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "GuV31ro_WY",
+          "name": "FooterTop",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicFooterTop.tsx",
+          "importSpec": {
+            "modulePath": "FooterTop.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicFooterTop.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "cGx5Wjz36tS",
+          "name": "Values",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicValues.tsx",
+          "importSpec": {
+            "modulePath": "Values.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicValues.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "3vLgE3krIC",
+          "name": "Amenities",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicAmenities.tsx",
+          "importSpec": {
+            "modulePath": "Amenities.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicAmenities.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [
+        {
+          "id": "RXtLxgj3os6IA",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "tDLsyY6XWLzrO",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "f4b226_qaFgSE",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Searchsvg.tsx"
+        },
+        {
+          "id": "qdO_XRGuMl3T0",
+          "name": "Icon3Icon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Icon3.tsx"
+        },
+        {
+          "id": "ZvfnMOsJfTQfG",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "cQ9Mr-9c9FWo6",
+          "name": "Icon28Icon",
+          "moduleFilePath": "plasmic/mount_rainier_lodging/icons/PlasmicIcon__Icon28.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "BbX2ajQIuSpXL",
+          "name": "logo (1).svg",
+          "filePath": "plasmic/mount_rainier_lodging/images/logo1Svg.png"
+        },
+        {
+          "id": "fkiAruEUVdO1R",
+          "name": "leaves-bg.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/leavesBgjpg.jpeg"
+        },
+        {
+          "id": "SKzJ4sWX9XT_Z",
+          "name": "pool-aerial.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/poolAerialjpg.jpeg"
+        },
+        {
+          "id": "xecuq_OBDfYkT",
+          "name": "video-thumnail.png",
+          "filePath": "plasmic/mount_rainier_lodging/images/videoThumnailpng.png"
+        },
+        {
+          "id": "17n2Ef_jS8Q-C",
+          "name": "living-room.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/livingRoomjpg.jpeg"
+        },
+        {
+          "id": "c6Dz0zINJ3Lxc",
+          "name": "spa.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/spajpg.jpeg"
+        },
+        {
+          "id": "QLi2AftXeJTWD",
+          "name": "food.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/foodjpg.jpeg"
+        },
+        {
+          "id": "FklFinzvMtoXk",
+          "name": "waterfall.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/waterfalljpg.jpeg"
+        },
+        {
+          "id": "OmLgcR2KgB0Ci",
+          "name": "coconut (1).jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/coconut1Jpg.jpeg"
+        },
+        {
+          "id": "-D5WEEPSZmUAj",
+          "name": "road-g6f4064e2a_1920.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/roadG6F4064E2A1920Jpg.jpeg"
+        },
+        {
+          "id": "QPFGa3ttq33oH",
+          "name": "peter-chirkov-ZjibYTJ8JT4-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/peterChirkovZjibYtj8Jt4Unsplashjpg.jpeg"
+        },
+        {
+          "id": "dscWH7Gh-v9IU",
+          "name": "krystal-ng-DoppEKJjIbc-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/krystalNgDoppEkJjIbcUnsplashjpg.jpeg"
+        },
+        {
+          "id": "vemFS-lYeBbSm",
+          "name": "mj-tangonan-OE6qLhRHhhs-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"
+        },
+        {
+          "id": "NHAUzIu3_k0Fm",
+          "name": "hidayat-abisena--A2IuOZnmHs-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/hidayatAbisenaA2IuOZnmHsUnsplashjpg.jpeg"
+        },
+        {
+          "id": "AYWyUgAbb4RWp",
+          "name": "sunset-g3807900dc_640.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/sunsetG3807900Dc640Jpg.jpeg"
+        },
+        {
+          "id": "AoKuNQctXDxzx",
+          "name": "nathan-dumlao-etkmWcqtZzg-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/nathanDumlaoEtkmWcqtZzgUnsplashjpg.jpeg"
+        },
+        {
+          "id": "eAP2jszDRhrcE",
+          "name": "ornate-g752eb5b7f_640.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/ornateG752Eb5B7F640Jpg.jpeg"
+        },
+        {
+          "id": "3259ZwlxWwIYA",
+          "name": "jonathan-borba-GN87eIR9xUs-unsplash.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/jonathanBorbaGn87EIr9XUsUnsplashjpg.jpeg"
+        },
+        {
+          "id": "nOmC47cgRkNIb",
+          "name": "stephanie-harvey-OTUahHcqs0Y-unsplash (1).jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/stephanieHarveyOtUahHcqs0YUnsplash1Jpg.jpeg"
+        },
+        {
+          "id": "xEzF70xuSs0by",
+          "name": "peter-chirkov-ZjibYTJ8JT4-unsplash.jpg 2",
+          "filePath": "plasmic/mount_rainier_lodging/images/peterChirkovZjibYtj8Jt4Unsplashjpg2.jpeg"
+        },
+        {
+          "id": "vzYxVCpYJLPSZ",
+          "name": "frost-6792549_1920.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/frost67925491920Jpg.jpeg"
+        },
+        {
+          "id": "N89tseehIvjyf",
+          "name": "frost-6792549_1920.jpg 2",
+          "filePath": "plasmic/mount_rainier_lodging/images/frost67925491920Jpg2.jpeg"
+        },
+        {
+          "id": "xByCcis-pbNkE",
+          "name": "image",
+          "filePath": "plasmic/mount_rainier_lodging/images/image.png"
+        },
+        {
+          "id": "5ZSz_hhg9De1Q",
+          "name": "image 2",
+          "filePath": "plasmic/mount_rainier_lodging/images/image2.png"
+        },
+        {
+          "id": "0eYproaUs",
+          "name": "image 6",
+          "filePath": "plasmic/mount_rainier_lodging/images/image6.png"
+        },
+        {
+          "id": "7NL4at013",
+          "name": "image 7",
+          "filePath": "plasmic/mount_rainier_lodging/images/image7.jpeg"
+        },
+        {
+          "id": "yeOOCnLYw",
+          "name": "image 8",
+          "filePath": "plasmic/mount_rainier_lodging/images/image8.jpeg"
+        },
+        {
+          "id": "fLJc-vEW8",
+          "name": "image 9",
+          "filePath": "plasmic/mount_rainier_lodging/images/image9.jpeg"
+        },
+        {
+          "id": "_EbRmFxzf",
+          "name": "image 10",
+          "filePath": "plasmic/mount_rainier_lodging/images/image10.png"
+        },
+        {
+          "id": "r-KG85DOq",
+          "name": "image 12",
+          "filePath": "plasmic/mount_rainier_lodging/images/image12.jpeg"
+        },
+        {
+          "id": "DxCorkRMq",
+          "name": "image 13",
+          "filePath": "plasmic/mount_rainier_lodging/images/image13.jpeg"
+        },
+        {
+          "id": "aP9Iaewm4",
+          "name": "image 14",
+          "filePath": "plasmic/mount_rainier_lodging/images/image14.jpeg"
+        },
+        {
+          "id": "VGvnaytVe",
+          "name": "image 15",
+          "filePath": "plasmic/mount_rainier_lodging/images/image15.png"
+        },
+        {
+          "id": "Z05FbM3--",
+          "name": "image 16",
+          "filePath": "plasmic/mount_rainier_lodging/images/image16.png"
+        },
+        {
+          "id": "JcO6hVeuV",
+          "name": "image 17",
+          "filePath": "plasmic/mount_rainier_lodging/images/image17.png"
+        },
+        {
+          "id": "pRYaYKHvt",
+          "name": "image 18",
+          "filePath": "plasmic/mount_rainier_lodging/images/image18.png"
+        },
+        {
+          "id": "1A6JiiaVmxe",
+          "name": "image 19",
+          "filePath": "plasmic/mount_rainier_lodging/images/image19.png"
+        },
+        {
+          "id": "ZQPaCams0b8",
+          "name": "image 20",
+          "filePath": "plasmic/mount_rainier_lodging/images/image20.svg"
+        },
+        {
+          "id": "o43FY4kCa",
+          "name": "face.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/facejpg.jpeg"
+        },
+        {
+          "id": "Ed07xk_bt",
+          "name": "aahil face.jpg",
+          "filePath": "plasmic/mount_rainier_lodging/images/aahilFacejpg.jpeg"
+        },
+        {
+          "id": "ohYDVXmLH",
+          "name": "Mount Ranier Lodging Logo.png",
+          "filePath": "plasmic/mount_rainier_lodging/images/mountRanierLodgingLogopng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "plasmic/mount_rainier_lodging/PlasmicGlobalContextsProvider.tsx",
+      "codeComponents": [
+        {
+          "id": "GcgE1Jl-5f",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "4D-jiCliGU",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "jNH4r65QhDehJ",
+        "name": "Screen",
+        "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+        "contextFilePath": "plasmic/mount_rainier_lodging/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "cliVersion": "0.1.208",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.208/dist/plasmic.schema.json"
+}
