@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@plasmicapp/cli": "^0.1.208",
+    "@plasmicapp/cli": "^0.1.256",
     "@plasmicapp/host": "^1.0.103",
-    "@plasmicapp/react-web": "^0.2.153",
+    "@plasmicapp/react-web": "^0.2.192",
     "@plasmicpkgs/commerce": "^0.0.97",
     "@plasmicpkgs/commerce-swell": "^0.0.104",
     "@plasmicpkgs/lottie-react": "^0.0.88",
