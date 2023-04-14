@@ -239,7 +239,7 @@ function PlasmicNavBar__RenderFunc(props: {
                   projectcss.__wab_text,
                   sty.link__sziWr
                 )}
-                href={`/about-us`}
+                href={`/account`}
               >
                 {"Account"}
               </a>
