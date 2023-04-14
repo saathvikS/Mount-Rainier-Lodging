@@ -129,7 +129,7 @@
   min-width: 0;
   padding: 8px;
 }
-.h1 {
+.h1__wcgXj {
   width: 1639px;
   height: auto;
   max-width: 100%;
@@ -141,8 +141,26 @@
   display: block;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .h1 {
+  .h1__wcgXj {
     font-size: 48px;
+  }
+}
+.h1__gd9Dc {
+  width: 1639px;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  color: var(--token-ol7Qe2B4StZTc);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  padding-top: 0px;
+  font-size: 30px;
+  margin-top: 35px;
+  display: block;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h1__gd9Dc {
+    font-size: 30px;
   }
 }
 .freeBox__y10Mn {

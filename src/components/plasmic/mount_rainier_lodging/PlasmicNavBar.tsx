@@ -213,6 +213,32 @@ function PlasmicNavBar__RenderFunc(props: {
               {"About Us"}
             </a>
           </NavBarButtons>
+          {(() => {
+            try {
+              return currentUser.isLoggedIn;
+            } catch (e) {
+              if (e instanceof TypeError) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
+            <NavBarButtons
+              className={classNames("__wab_instance", sty.navBarButtons__aA3ZN)}
+            >
+              <a
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link__sziWr
+                )}
+                href={`/about-us`}
+              >
+                {"Account"}
+              </a>
+            </NavBarButtons>
+          ) : null}
         </p.Stack>
         <NavBarButtons
           className={classNames("__wab_instance", sty.navBarButtons__x8P4)}

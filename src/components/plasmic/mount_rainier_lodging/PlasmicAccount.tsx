@@ -70,7 +70,6 @@ export type PlasmicAccount__OverridesType = {
   container?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
   scrollParallax?: p.Flex<typeof ParallaxWrapper>;
-  h1?: p.Flex<"h1">;
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
   brownColorBg?: p.Flex<"div">;
@@ -182,16 +181,35 @@ function PlasmicAccount__RenderFunc(props: {
                       >
                         {true ? (
                           <h1
-                            data-plasmic-name={"h1"}
-                            data-plasmic-override={overrides.h1}
                             className={classNames(
                               projectcss.all,
                               projectcss.h1,
                               projectcss.__wab_text,
-                              sty.h1
+                              sty.h1__wcgXj
                             )}
                           >
                             {"Welcome."}
+                          </h1>
+                        ) : null}
+                        {(() => {
+                          try {
+                            return !currentUser.isLoggedIn;
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return true;
+                            }
+                            throw e;
+                          }
+                        })() ? (
+                          <h1
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h1,
+                              projectcss.__wab_text,
+                              sty.h1__gd9Dc
+                            )}
+                          >
+                            {"Please Sign In to Continue"}
                           </h1>
                         ) : null}
                       </div>
@@ -201,7 +219,16 @@ function PlasmicAccount__RenderFunc(props: {
               </p.Stack>
             </div>
           </div>
-          {true ? (
+          {(() => {
+            try {
+              return currentUser.isLoggedIn;
+            } catch (e) {
+              if (e instanceof TypeError) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
             <div className={classNames(projectcss.all, sty.freeBox__y10Mn)}>
               <h2
                 className={classNames(
@@ -280,436 +307,456 @@ function PlasmicAccount__RenderFunc(props: {
               </div>
             </div>
           ) : null}
-          <div
-            data-plasmic-name={"brownColorBg"}
-            data-plasmic-override={overrides.brownColorBg}
-            className={classNames(projectcss.all, sty.brownColorBg)}
-          >
-            <Reveal
-              cascade={true}
-              className={classNames("__wab_instance", sty.reveal__me6KY)}
-              duration={1500 as const}
-              effect={"slide" as const}
-              reverse={false}
-              triggerOnce={false}
+          {(() => {
+            try {
+              return currentUser.isLoggedIn;
+            } catch (e) {
+              if (e instanceof TypeError) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
+            <div
+              data-plasmic-name={"brownColorBg"}
+              data-plasmic-override={overrides.brownColorBg}
+              className={classNames(projectcss.all, sty.brownColorBg)}
             >
-              {true ? (
-                <div
-                  data-plasmic-name={"section12"}
-                  data-plasmic-override={overrides.section12}
-                  className={classNames(projectcss.all, sty.section12)}
-                >
-                  {true ? (
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___57Sg)}
-                    >
+              <Reveal
+                cascade={true}
+                className={classNames("__wab_instance", sty.reveal__me6KY)}
+                duration={1500 as const}
+                effect={"slide" as const}
+                reverse={false}
+                triggerOnce={false}
+              >
+                {true ? (
+                  <div
+                    data-plasmic-name={"section12"}
+                    data-plasmic-override={overrides.section12}
+                    className={classNames(projectcss.all, sty.section12)}
+                  >
+                    {true ? (
                       <div
-                        data-plasmic-name={"rowContainer3"}
-                        data-plasmic-override={overrides.rowContainer3}
                         className={classNames(
                           projectcss.all,
-                          sty.rowContainer3
+                          sty.freeBox___57Sg
                         )}
                       >
                         <div
+                          data-plasmic-name={"rowContainer3"}
+                          data-plasmic-override={overrides.rowContainer3}
                           className={classNames(
                             projectcss.all,
-                            sty.columns___2QyGh
+                            sty.rowContainer3
                           )}
                         >
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.column__gNld
+                              sty.columns___2QyGh
                             )}
                           >
-                            <p.PlasmicImg
-                              alt={""}
-                              className={classNames(sty.img__ysq5N)}
-                              displayHeight={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "mobileOnly"
-                                )
-                                  ? ("230px" as const)
-                                  : ("415px" as const)
-                              }
-                              displayMaxHeight={"none" as const}
-                              displayMaxWidth={"100%" as const}
-                              displayMinHeight={"0" as const}
-                              displayMinWidth={"0" as const}
-                              displayWidth={"100%" as const}
-                              loading={"lazy" as const}
-                              src={{
-                                src: stephanieHarveyOtUahHcqs0YUnsplash1JpgNOmC47CgRkNIb,
-                                fullWidth: 640,
-                                fullHeight: 853,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.column__d6Dxb
-                            )}
-                          >
-                            {true ? (
-                              <p.Stack
-                                as={"div"}
-                                hasGap={true}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__rjok7
-                                )}
-                              >
-                                <h2
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.h2,
-                                    projectcss.__wab_text,
-                                    sty.h2___0HoAc
-                                  )}
-                                >
-                                  {"Reward Points"}
-                                </h2>
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__peKyU
-                                  )}
-                                >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? "Our hotel offers three types of rooms to cater to the needs of all guests. These room choices are standard, double, and presidential suites. Regardless of whatever room you choose, our staff is on hand 24/7 to ensure that your stay is as comfortable and enjoyable as possible."
-                                    : "Here is how many rewards points you have: "}
-                                </div>
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__tfgvi
-                                  )}
-                                >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mobileOnly"
-                                  )
-                                    ? "Our hotel offers three types of rooms to cater to the needs of all guests. These room choices are standard, double, and presidential suites. Regardless of whatever room you choose, our staff is on hand 24/7 to ensure that your stay is as comfortable and enjoyable as possible."
-                                    : (() => {
-                                        try {
-                                          return undefined;
-                                        } catch (e) {
-                                          if (e instanceof TypeError) {
-                                            return "Here is how many rewards points you have: ";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                </div>
-                                {true ? (
-                                  <Button
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.button__ofqqq
-                                    )}
-                                    color={"softBlue" as const}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__dbRov
-                                      )}
-                                    >
-                                      {"Our Room"}
-                                    </div>
-                                  </Button>
-                                ) : null}
-                              </p.Stack>
-                            ) : null}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </Reveal>
-            <Reveal
-              cascade={true}
-              className={classNames("__wab_instance", sty.reveal__ieo93)}
-              direction={"right" as const}
-              duration={1500 as const}
-              effect={"slide" as const}
-              reverse={false}
-              triggerOnce={false}
-            >
-              {true ? (
-                <div
-                  data-plasmic-name={"section13"}
-                  data-plasmic-override={overrides.section13}
-                  className={classNames(projectcss.all, sty.section13)}
-                >
-                  {true ? (
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__e6H9G)}
-                    >
-                      <div
-                        data-plasmic-name={"rowContainer9"}
-                        data-plasmic-override={overrides.rowContainer9}
-                        className={classNames(
-                          projectcss.all,
-                          sty.rowContainer9
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.columns__nLmBj
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.column__yrkoE
-                            )}
-                          >
-                            <p.PlasmicImg
-                              alt={""}
-                              className={classNames(sty.img__aKxwI)}
-                              displayHeight={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "mobileOnly"
-                                )
-                                  ? ("230px" as const)
-                                  : ("415px" as const)
-                              }
-                              displayMaxHeight={"none" as const}
-                              displayMaxWidth={"100%" as const}
-                              displayMinHeight={"0" as const}
-                              displayMinWidth={"0" as const}
-                              displayWidth={"100%" as const}
-                              loading={"lazy" as const}
-                              src={{
-                                src: spajpgC6Dz0ZInj3Lxc,
-                                fullWidth: 800,
-                                fullHeight: 1200,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.column__s9Saz
-                            )}
-                          >
-                            <h2
+                            <div
                               className={classNames(
                                 projectcss.all,
-                                projectcss.h2,
-                                projectcss.__wab_text,
-                                sty.h2__sOaRw
+                                sty.column__gNld
                               )}
                             >
-                              {"Future Stays"}
-                            </h2>
-                            {true ? (
-                              <p.Stack
-                                as={"div"}
-                                hasGap={true}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__nLpQ0
-                                )}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text___3CUe
-                                  )}
-                                >
-                                  {hasVariant(
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__ysq5N)}
+                                displayHeight={
+                                  hasVariant(
                                     globalVariants,
                                     "screen",
                                     "mobileOnly"
                                   )
-                                    ? "Located near the majestic Mt. Rainier, our hotel offers a range of exciting activities for guests to enjoy. From taking a scenic drive to relaxing in a hot tub, we provide activities that would suit both adventure seekers and people looking to unwind."
-                                    : "Here are your future bookings with Mount Rainier Lodging. Hope you will have a great time!"}
-                                </div>
-                                {true ? (
-                                  <Button
+                                    ? ("230px" as const)
+                                    : ("415px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"100%" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: stephanieHarveyOtUahHcqs0YUnsplash1JpgNOmC47CgRkNIb,
+                                  fullWidth: 640,
+                                  fullHeight: 853,
+                                  aspectRatio: undefined
+                                }}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__d6Dxb
+                              )}
+                            >
+                              {true ? (
+                                <p.Stack
+                                  as={"div"}
+                                  hasGap={true}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__rjok7
+                                  )}
+                                >
+                                  <h2
                                     className={classNames(
-                                      "__wab_instance",
-                                      sty.button__q8Zsb
+                                      projectcss.all,
+                                      projectcss.h2,
+                                      projectcss.__wab_text,
+                                      sty.h2___0HoAc
                                     )}
-                                    color={"softBlue" as const}
                                   >
-                                    <div
+                                    {"Reward Points"}
+                                  </h2>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__peKyU
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? "Our hotel offers three types of rooms to cater to the needs of all guests. These room choices are standard, double, and presidential suites. Regardless of whatever room you choose, our staff is on hand 24/7 to ensure that your stay is as comfortable and enjoyable as possible."
+                                      : "Here is how many rewards points you have: "}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__tfgvi
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? "Our hotel offers three types of rooms to cater to the needs of all guests. These room choices are standard, double, and presidential suites. Regardless of whatever room you choose, our staff is on hand 24/7 to ensure that your stay is as comfortable and enjoyable as possible."
+                                      : (() => {
+                                          try {
+                                            return undefined;
+                                          } catch (e) {
+                                            if (e instanceof TypeError) {
+                                              return "Here is how many rewards points you have: ";
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                  </div>
+                                  {true ? (
+                                    <Button
                                       className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text___9R7QU
+                                        "__wab_instance",
+                                        sty.button__ofqqq
                                       )}
+                                      color={"softBlue" as const}
                                     >
-                                      {"Our Room"}
-                                    </div>
-                                  </Button>
-                                ) : null}
-                              </p.Stack>
-                            ) : null}
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__dbRov
+                                        )}
+                                      >
+                                        {"Our Room"}
+                                      </div>
+                                    </Button>
+                                  ) : null}
+                                </p.Stack>
+                              ) : null}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </Reveal>
-            <Reveal
-              cascade={true}
-              className={classNames("__wab_instance", sty.reveal__sGy0Q)}
-              direction={"left" as const}
-              duration={1500 as const}
-              effect={"slide" as const}
-              triggerOnce={false}
-            >
-              {true ? (
-                <div
-                  data-plasmic-name={"section14"}
-                  data-plasmic-override={overrides.section14}
-                  className={classNames(projectcss.all, sty.section14)}
-                >
-                  {true ? (
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__oyOd)}
-                    >
+                    ) : null}
+                  </div>
+                ) : null}
+              </Reveal>
+              <Reveal
+                cascade={true}
+                className={classNames("__wab_instance", sty.reveal__ieo93)}
+                direction={"right" as const}
+                duration={1500 as const}
+                effect={"slide" as const}
+                reverse={false}
+                triggerOnce={false}
+              >
+                {true ? (
+                  <div
+                    data-plasmic-name={"section13"}
+                    data-plasmic-override={overrides.section13}
+                    className={classNames(projectcss.all, sty.section13)}
+                  >
+                    {true ? (
                       <div
-                        data-plasmic-name={"rowContainer10"}
-                        data-plasmic-override={overrides.rowContainer10}
                         className={classNames(
                           projectcss.all,
-                          sty.rowContainer10
+                          sty.freeBox__e6H9G
                         )}
                       >
                         <div
+                          data-plasmic-name={"rowContainer9"}
+                          data-plasmic-override={overrides.rowContainer9}
                           className={classNames(
                             projectcss.all,
-                            sty.columns__znkNa
+                            sty.rowContainer9
                           )}
                         >
                           <div
                             className={classNames(
                               projectcss.all,
-                              sty.column__mQgT8
+                              sty.columns__nLmBj
                             )}
                           >
-                            <p.PlasmicImg
-                              alt={""}
-                              className={classNames(sty.img__yltb3)}
-                              displayHeight={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "mobileOnly"
-                                )
-                                  ? ("230px" as const)
-                                  : ("415px" as const)
-                              }
-                              displayMaxHeight={"none" as const}
-                              displayMaxWidth={"100%" as const}
-                              displayMinHeight={"0" as const}
-                              displayMinWidth={"0" as const}
-                              displayWidth={"100%" as const}
-                              loading={"lazy" as const}
-                              src={{
-                                src: krystalNgDoppEkJjIbcUnsplashjpgDscWh7GhV9Iu,
-                                fullWidth: 2730,
-                                fullHeight: 4096,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.column__rRPgG
-                            )}
-                          >
-                            {true ? (
-                              <p.Stack
-                                as={"div"}
-                                hasGap={true}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__uVEiW
-                                )}
-                              >
-                                <h2
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.h2,
-                                    projectcss.__wab_text,
-                                    sty.h2__lut
-                                  )}
-                                >
-                                  {"Past Stays"}
-                                </h2>
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__pAwaT
-                                  )}
-                                >
-                                  {hasVariant(
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__yrkoE
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__aKxwI)}
+                                displayHeight={
+                                  hasVariant(
                                     globalVariants,
                                     "screen",
                                     "mobileOnly"
                                   )
-                                    ? "Our hotel provides a range of amenities to ensure a comfortable and memorable stay. From on-site dining to a wellness center, we have everything needed to ensure everyone has a spectacular time at the hotel."
-                                    : "Here are all the past stays you have had with us. We appreciate your business!"}
-                                </div>
-                                {true ? (
-                                  <Button
+                                    ? ("230px" as const)
+                                    : ("415px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"100%" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: spajpgC6Dz0ZInj3Lxc,
+                                  fullWidth: 800,
+                                  fullHeight: 1200,
+                                  aspectRatio: undefined
+                                }}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__s9Saz
+                              )}
+                            >
+                              <h2
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.h2,
+                                  projectcss.__wab_text,
+                                  sty.h2__sOaRw
+                                )}
+                              >
+                                {"Future Stays"}
+                              </h2>
+                              {true ? (
+                                <p.Stack
+                                  as={"div"}
+                                  hasGap={true}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__nLpQ0
+                                  )}
+                                >
+                                  <div
                                     className={classNames(
-                                      "__wab_instance",
-                                      sty.button__ql2Km
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text___3CUe
                                     )}
-                                    color={"softBlue" as const}
                                   >
-                                    <div
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? "Located near the majestic Mt. Rainier, our hotel offers a range of exciting activities for guests to enjoy. From taking a scenic drive to relaxing in a hot tub, we provide activities that would suit both adventure seekers and people looking to unwind."
+                                      : "Here are your future bookings with Mount Rainier Lodging. Hope you will have a great time!"}
+                                  </div>
+                                  {true ? (
+                                    <Button
                                       className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__zxN8Z
+                                        "__wab_instance",
+                                        sty.button__q8Zsb
                                       )}
+                                      color={"softBlue" as const}
                                     >
-                                      {"Our Room"}
-                                    </div>
-                                  </Button>
-                                ) : null}
-                              </p.Stack>
-                            ) : null}
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text___9R7QU
+                                        )}
+                                      >
+                                        {"Our Room"}
+                                      </div>
+                                    </Button>
+                                  ) : null}
+                                </p.Stack>
+                              ) : null}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </Reveal>
-          </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </Reveal>
+              <Reveal
+                cascade={true}
+                className={classNames("__wab_instance", sty.reveal__sGy0Q)}
+                direction={"left" as const}
+                duration={1500 as const}
+                effect={"slide" as const}
+                triggerOnce={false}
+              >
+                {true ? (
+                  <div
+                    data-plasmic-name={"section14"}
+                    data-plasmic-override={overrides.section14}
+                    className={classNames(projectcss.all, sty.section14)}
+                  >
+                    {true ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__oyOd
+                        )}
+                      >
+                        <div
+                          data-plasmic-name={"rowContainer10"}
+                          data-plasmic-override={overrides.rowContainer10}
+                          className={classNames(
+                            projectcss.all,
+                            sty.rowContainer10
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.columns__znkNa
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__mQgT8
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__yltb3)}
+                                displayHeight={
+                                  hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mobileOnly"
+                                  )
+                                    ? ("230px" as const)
+                                    : ("415px" as const)
+                                }
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"100%" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: krystalNgDoppEkJjIbcUnsplashjpgDscWh7GhV9Iu,
+                                  fullWidth: 2730,
+                                  fullHeight: 4096,
+                                  aspectRatio: undefined
+                                }}
+                              />
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.column__rRPgG
+                              )}
+                            >
+                              {true ? (
+                                <p.Stack
+                                  as={"div"}
+                                  hasGap={true}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__uVEiW
+                                  )}
+                                >
+                                  <h2
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.h2,
+                                      projectcss.__wab_text,
+                                      sty.h2__lut
+                                    )}
+                                  >
+                                    {"Past Stays"}
+                                  </h2>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__pAwaT
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobileOnly"
+                                    )
+                                      ? "Our hotel provides a range of amenities to ensure a comfortable and memorable stay. From on-site dining to a wellness center, we have everything needed to ensure everyone has a spectacular time at the hotel."
+                                      : "Here are all the past stays you have had with us. We appreciate your business!"}
+                                  </div>
+                                  {true ? (
+                                    <Button
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.button__ql2Km
+                                      )}
+                                      color={"softBlue" as const}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__zxN8Z
+                                        )}
+                                      >
+                                        {"Our Room"}
+                                      </div>
+                                    </Button>
+                                  ) : null}
+                                </p.Stack>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </Reveal>
+            </div>
+          ) : null}
           {true ? (
             <div className={classNames(projectcss.all, sty.freeBox__a32BK)}>
               {true ? (
@@ -862,7 +909,6 @@ const PlasmicDescendants = {
     "container",
     "navBar",
     "scrollParallax",
-    "h1",
     "section1",
     "rowContainer8",
     "brownColorBg",
@@ -880,13 +926,11 @@ const PlasmicDescendants = {
     "headerMainSection",
     "container",
     "navBar",
-    "scrollParallax",
-    "h1"
+    "scrollParallax"
   ],
-  container: ["container", "navBar", "scrollParallax", "h1"],
+  container: ["container", "navBar", "scrollParallax"],
   navBar: ["navBar"],
-  scrollParallax: ["scrollParallax", "h1"],
-  h1: ["h1"],
+  scrollParallax: ["scrollParallax"],
   section1: ["section1", "rowContainer8"],
   rowContainer8: ["rowContainer8"],
   brownColorBg: [
@@ -917,7 +961,6 @@ type NodeDefaultElementType = {
   container: "div";
   navBar: typeof NavBar;
   scrollParallax: typeof ParallaxWrapper;
-  h1: "h1";
   section1: "div";
   rowContainer8: "div";
   brownColorBg: "div";
@@ -1013,7 +1056,6 @@ export const PlasmicAccount = Object.assign(
     container: makeNodeComponent("container"),
     navBar: makeNodeComponent("navBar"),
     scrollParallax: makeNodeComponent("scrollParallax"),
-    h1: makeNodeComponent("h1"),
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
     brownColorBg: makeNodeComponent("brownColorBg"),
