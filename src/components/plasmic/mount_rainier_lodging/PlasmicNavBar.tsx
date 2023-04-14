@@ -16,6 +16,11 @@ import * as React from "react";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
+import {
+  usePlasmicDataConfig,
+  executePlasmicDataOp,
+  useDependencyAwareQuery
+} from "@plasmicapp/react-web/lib/data-sources";
 
 import {
   hasVariant,
@@ -94,6 +99,7 @@ function PlasmicNavBar__RenderFunc(props: {
   const [$queries, setDollarQueries] = React.useState({});
 
   const dataSourcesCtx = usePlasmicDataSourceContext();
+  const { cache, mutate } = usePlasmicDataConfig();
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjNh4R65QhDehJ()
@@ -339,6 +345,88 @@ function PlasmicNavBar__RenderFunc(props: {
                     componentUuid: "1afyPt5Gh0q"
                   },
                   $steps["login"]
+                );
+              }
+              $steps["airtableCreate"] = true
+                ? (() => {
+                    const actionArgs = {
+                      dataOp: __wrapUserFunction(
+                        {
+                          type: "InteractionArgLoc",
+                          actionName: "dataSourceOp",
+                          interactionUuid: "EMh0ACuvr",
+                          componentUuid: "1afyPt5Gh0q",
+                          argName: "dataOp"
+                        },
+                        () => ({
+                          sourceId: "2eNRs8vDuq79kWo1T8bmFo",
+                          opId: "219876ef44e6d71918d76e794931de9cb4e939ea69a57a5748a761b99224574c42dec7c2de19c92295aff463df5767e972775e26b9b5b752b554a5553dcc98b4f1d227b022516b78e70adbc2c1911f399138c08deb9d7cd7018e49b9fefd6e020bb196fcda212a1c48db82227b8fbf11b82121f2d2d0daf76626fdcba80b265360cb5058c13df0f2f13a",
+                          userArgs: {},
+                          cacheKey: null,
+                          invalidatedKeys: ["plasmic_refresh_all"],
+                          roleId: null
+                        })
+                      )
+                    };
+                    return __wrapUserFunction(
+                      {
+                        type: "InteractionLoc",
+                        actionName: "dataSourceOp",
+                        interactionUuid: "EMh0ACuvr",
+                        componentUuid: "1afyPt5Gh0q"
+                      },
+                      () =>
+                        (async ({ dataOp, continueOnError }) => {
+                          try {
+                            const response = await executePlasmicDataOp(
+                              dataOp,
+                              { userAuthToken: dataSourcesCtx?.userAuthToken }
+                            );
+                            if (
+                              dataOp.invalidatedKeys.find(
+                                key => key === "plasmic_refresh_all"
+                              )
+                            ) {
+                              Array.from(cache.keys()).forEach(key => {
+                                mutate(key);
+                              });
+                              return response;
+                            }
+                            dataOp.invalidatedKeys?.forEach(invalidateKey =>
+                              Array.from(cache.keys()).forEach(key => {
+                                if (
+                                  typeof key === "string" &&
+                                  key.includes(`.$.${invalidateKey}.$.`)
+                                ) {
+                                  mutate(key);
+                                }
+                              })
+                            );
+
+                            return response;
+                          } catch (e) {
+                            if (!continueOnError) {
+                              throw e;
+                            }
+                            return e;
+                          }
+                        })?.apply(null, [actionArgs]),
+                      actionArgs
+                    );
+                  })()
+                : undefined;
+              if (
+                typeof $steps["airtableCreate"] === "object" &&
+                typeof $steps["airtableCreate"].then === "function"
+              ) {
+                $steps["airtableCreate"] = await __wrapUserPromise(
+                  {
+                    type: "InteractionLoc",
+                    actionName: "dataSourceOp",
+                    interactionUuid: "EMh0ACuvr",
+                    componentUuid: "1afyPt5Gh0q"
+                  },
+                  $steps["airtableCreate"]
                 );
               }
             }}
