@@ -472,6 +472,19 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "switch"
+        },
+        {
+          "id": "n68H3Zqr_L",
+          "name": "Account",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicAccount.tsx",
+          "importSpec": {
+            "modulePath": "Account.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicAccount.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -740,6 +753,6 @@
     ]
   },
   "wrapPagesWithGlobalContexts": true,
-  "cliVersion": "0.1.256",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.256/dist/plasmic.schema.json"
+  "cliVersion": "0.1.257",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.257/dist/plasmic.schema.json"
 }

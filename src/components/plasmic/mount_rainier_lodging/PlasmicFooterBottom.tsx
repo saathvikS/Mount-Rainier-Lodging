@@ -116,7 +116,7 @@ function PlasmicFooterBottom__RenderFunc(props: {
           )}
         >
           {
-            "© Mount Rainier Lodging. The following website contains copyrighted materials used under the multimedia guidelines and fair use exceptions of US copyright law, further use is prohibited. Built with❤️."
+            "© Mount Rainier Lodging. The following website contains copyrighted materials used under the multimedia guidelines and fair use exceptions of US copyright law, further use is prohibited. Built with ❤️."
           }
         </div>
       </div>
