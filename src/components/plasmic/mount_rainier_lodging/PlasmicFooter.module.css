@@ -397,6 +397,9 @@
   font-weight: 300;
   color: #535353;
   line-height: 1.6;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
   font-style: normal;
   text-align: left;
   text-transform: none;
@@ -406,7 +409,6 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
-  padding: 0px;
   margin: 0px 0px 7px;
 }
 .link__iuDjq {
@@ -415,6 +417,9 @@
   line-height: 1.6;
   font-family: "Inter", sans-serif;
   color: #292d2f;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
   width: 100%;
   height: auto;
   max-width: 800px;
@@ -428,6 +433,5 @@
   text-overflow: clip;
   align-self: flex-start;
   min-width: 0;
-  padding: 0px;
   margin: 0px 0px 7px;
 }

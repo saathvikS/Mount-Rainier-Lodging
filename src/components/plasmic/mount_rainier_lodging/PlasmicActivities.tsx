@@ -35,6 +35,11 @@ import {
 import NavBar from "../../NavBar"; // plasmic-import: 1afyPt5Gh0q/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
+import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax"; // plasmic-import: bozP4lLlAZ/codeComponent
+import { ProductBox } from "@plasmicpkgs/commerce"; // plasmic-import: 1gYJf_XBZUAD/codeComponent
+import TextInput from "../../TextInput"; // plasmic-import: BPdr9UnkUGcde/component
+import Button from "../../Button"; // plasmic-import: 0GSRDNreqxvH/component
+import { ProductTextField } from "@plasmicpkgs/commerce"; // plasmic-import: S1F4q0wN6b/codeComponent
 import FooterTop from "../../FooterTop"; // plasmic-import: GuV31ro_WY/component
 import Footer from "../../Footer"; // plasmic-import: IDlLfPVadLh/component
 import FooterBottom from "../../FooterBottom"; // plasmic-import: rDEJujvel4T/component
@@ -46,6 +51,10 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_mount_rainier_lodging.module.css"; // plasmic-import: x2CpsrHBvuW1zdv5pEkF5Z/projectcss
 import sty from "./PlasmicActivities.module.css"; // plasmic-import: 8y0EWuFHRBh/css
 
+import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: f4b226_qaFgSE/icon
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: tDLsyY6XWLzrO/icon
+import image77Nl4At013 from "./images/image7.jpeg"; // plasmic-import: 7NL4at013/picture
+import image8YeOoCnLYw from "./images/image8.jpeg"; // plasmic-import: yeOOCnLYw/picture
 import mjTangonanOe6QLhRHhhsUnsplashjpgVemFsLYeBbSm from "./images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"; // plasmic-import: vemFS-lYeBbSm/picture
 import coconut1JpgOmLgcR2KgB0Ci from "./images/coconut1Jpg.jpeg"; // plasmic-import: OmLgcR2KgB0Ci/picture
 
@@ -66,8 +75,17 @@ export type PlasmicActivities__OverridesType = {
   h1?: p.Flex<"h1">;
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
-  text?: p.Flex<"div">;
   embedHtml?: p.Flex<typeof Embed>;
+  brownColorBg?: p.Flex<"div">;
+  section13?: p.Flex<"div">;
+  rowContainer9?: p.Flex<"div">;
+  textInput?: p.Flex<typeof TextInput>;
+  section14?: p.Flex<"div">;
+  rowContainer10?: p.Flex<"div">;
+  textInput3?: p.Flex<typeof TextInput>;
+  section15?: p.Flex<"div">;
+  rowContainer11?: p.Flex<"div">;
+  textInput5?: p.Flex<typeof TextInput>;
   footerTop?: p.Flex<typeof FooterTop>;
   footer?: p.Flex<typeof Footer>;
   footerBottom?: p.Flex<typeof FooterBottom>;
@@ -105,6 +123,30 @@ function PlasmicActivities__RenderFunc(props: {
 
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "textInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "" as const
+      },
+      {
+        path: "textInput3.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "" as const
+      },
+      {
+        path: "textInput5.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "" as const
+      }
+    ],
+    [$props, $ctx]
+  );
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjNh4R65QhDehJ()
@@ -215,12 +257,10 @@ function PlasmicActivities__RenderFunc(props: {
                             : "Explore what Mount Rainier has to offer."}
                         </h2>
                         <div
-                          data-plasmic-name={"text"}
-                          data-plasmic-override={overrides.text}
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text
+                            sty.text__yjQrf
                           )}
                         >
                           {hasVariant(globalVariants, "screen", "mobileOnly")
@@ -244,7 +284,7 @@ function PlasmicActivities__RenderFunc(props: {
                   code={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? ('<iframe src="https://www.google.com/maps/d/embed?mid=1UQg1ZbkHPmFcp0mHLIoG3WnRZYe4ExQ&ehbc=2E312F" width="400" height="489"></iframe>' as const)
-                      : ('<iframe src="https://www.google.com/maps/d/embed?mid=1UQg1ZbkHPmFcp0mHLIoG3WnRZYe4ExQ&ehbc=2E312F" width="1519" height="489"></iframe>' as const)
+                      : ('<iframe src="https://www.google.com/maps/d/embed?mid=1UQg1ZbkHPmFcp0mHLIoG3WnRZYe4ExQ&ehbc=2E312F" width="750" height="489"></iframe>' as const)
                   }
                 />
               </Reveal>
@@ -255,6 +295,677 @@ function PlasmicActivities__RenderFunc(props: {
             duration={2000 as const}
             triggerOnce={false}
           >
+            <div
+              data-plasmic-name={"brownColorBg"}
+              data-plasmic-override={overrides.brownColorBg}
+              className={classNames(projectcss.all, sty.brownColorBg)}
+            >
+              <ParallaxWrapper
+                className={classNames(
+                  "__wab_instance",
+                  sty.scrollParallax__ssGp
+                )}
+                disabled={true}
+                speed={20 as const}
+              >
+                <Reveal
+                  cascade={true}
+                  className={classNames("__wab_instance", sty.reveal__r57L)}
+                  delay={1.5 as const}
+                  direction={"right" as const}
+                  duration={1500 as const}
+                  effect={"slide" as const}
+                  reverse={false}
+                  triggerOnce={false}
+                >
+                  {true ? (
+                    <div
+                      data-plasmic-name={"section13"}
+                      data-plasmic-override={overrides.section13}
+                      className={classNames(projectcss.all, sty.section13)}
+                    >
+                      <div
+                        data-plasmic-name={"rowContainer9"}
+                        data-plasmic-override={overrides.rowContainer9}
+                        className={classNames(
+                          projectcss.all,
+                          sty.rowContainer9
+                        )}
+                      >
+                        <ProductBox
+                          className={classNames(
+                            "__wab_instance",
+                            sty.productBox__fuheA
+                          )}
+                          id={"63bb8d07ad447c0012f2cdb9" as const}
+                        >
+                          <ph.DataCtxReader>
+                            {$ctx => (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__iDypq
+                                )}
+                              >
+                                {true ? (
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__rfAx1
+                                    )}
+                                  >
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.columns__buN4H
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__ducQ
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            sty.freeBox__tmctp
+                                          )}
+                                        >
+                                          {true ? (
+                                            <p.Stack
+                                              as={"div"}
+                                              hasGap={true}
+                                              className={classNames(
+                                                projectcss.all,
+                                                sty.freeBox__hBj7M
+                                              )}
+                                            >
+                                              <ProductBox
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.productBox__lt8QA
+                                                )}
+                                                id={
+                                                  "643aebd21de17d0014b5a310" as const
+                                                }
+                                              >
+                                                <ph.DataCtxReader>
+                                                  {$ctx => (
+                                                    <div
+                                                      className={classNames(
+                                                        projectcss.all,
+                                                        projectcss.__wab_text,
+                                                        sty.text__uqP9O
+                                                      )}
+                                                    >
+                                                      {"ATV Tours"}
+                                                    </div>
+                                                  )}
+                                                </ph.DataCtxReader>
+                                              </ProductBox>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text__d8EyD
+                                                )}
+                                              >
+                                                {hasVariant(
+                                                  globalVariants,
+                                                  "screen",
+                                                  "mobileOnly"
+                                                )
+                                                  ? "This is the economy suite we offer. The Standard Suite comes with a single queen bed, a single walk-in shower bathroom and a balcony view. Accommodates for 1-2 people.\n\n$129.00"
+                                                  : "NEED TO ADD DESCRIPTION\n\n$89.00"}
+                                              </div>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text__wy20H
+                                                )}
+                                              >
+                                                {"Tour Date"}
+                                              </div>
+                                              <TextInput
+                                                data-plasmic-name={"textInput"}
+                                                data-plasmic-override={
+                                                  overrides.textInput
+                                                }
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.textInput
+                                                )}
+                                                onChange={(...eventArgs) => {
+                                                  p.generateStateOnChangeProp(
+                                                    $state,
+                                                    ["textInput", "value"]
+                                                  )(
+                                                    (e =>
+                                                      e.target?.value).apply(
+                                                      null,
+                                                      eventArgs
+                                                    )
+                                                  );
+                                                }}
+                                                placeholder={
+                                                  "Check-in Date" as const
+                                                }
+                                                value={p.generateStateValueProp(
+                                                  $state,
+                                                  ["textInput", "value"]
+                                                )}
+                                              />
+
+                                              <Button
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.button__pGk0G
+                                                )}
+                                                color={"sand" as const}
+                                                link={
+                                                  "https://mount-ranier-lodging.swell.store/buy/8Pwj97Am" as const
+                                                }
+                                              >
+                                                <a
+                                                  className={classNames(
+                                                    projectcss.all,
+                                                    projectcss.a,
+                                                    projectcss.__wab_text,
+                                                    sty.link__oyAb3
+                                                  )}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/8Pwj97Am" as const
+                                                  }
+                                                  target={"_blank" as const}
+                                                >
+                                                  {"See availability"}
+                                                </a>
+                                              </Button>
+                                            </p.Stack>
+                                          ) : null}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__dPl4C
+                                        )}
+                                      >
+                                        <p.PlasmicImg
+                                          alt={""}
+                                          className={classNames(sty.img__aksNs)}
+                                          displayHeight={"100%" as const}
+                                          displayMaxHeight={"none" as const}
+                                          displayMaxWidth={"100%" as const}
+                                          displayMinHeight={"0" as const}
+                                          displayMinWidth={"0" as const}
+                                          displayWidth={"100%" as const}
+                                          loading={"lazy" as const}
+                                          src={{
+                                            src: image77Nl4At013,
+                                            fullWidth: 1280,
+                                            fullHeight: 720,
+                                            aspectRatio: undefined
+                                          }}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                ) : null}
+                              </div>
+                            )}
+                          </ph.DataCtxReader>
+                        </ProductBox>
+                      </div>
+                    </div>
+                  ) : null}
+                </Reveal>
+              </ParallaxWrapper>
+              <ParallaxWrapper
+                className={classNames(
+                  "__wab_instance",
+                  sty.scrollParallax___0Y1G
+                )}
+                disabled={true}
+                speed={20 as const}
+              >
+                <Reveal
+                  cascade={true}
+                  className={classNames("__wab_instance", sty.reveal___5KhD)}
+                  delay={1.5 as const}
+                  direction={"left" as const}
+                  duration={1500 as const}
+                  effect={"slide" as const}
+                  reverse={false}
+                  triggerOnce={false}
+                >
+                  {true ? (
+                    <div
+                      data-plasmic-name={"section14"}
+                      data-plasmic-override={overrides.section14}
+                      className={classNames(projectcss.all, sty.section14)}
+                    >
+                      <div
+                        data-plasmic-name={"rowContainer10"}
+                        data-plasmic-override={overrides.rowContainer10}
+                        className={classNames(
+                          projectcss.all,
+                          sty.rowContainer10
+                        )}
+                      >
+                        <ProductBox
+                          className={classNames(
+                            "__wab_instance",
+                            sty.productBox__x1P6M
+                          )}
+                          id={"63bb8d07ad447c0012f2cdb9" as const}
+                        >
+                          <ph.DataCtxReader>
+                            {$ctx => (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__rdg4A
+                                )}
+                              >
+                                {true ? (
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__p5CzM
+                                    )}
+                                  >
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.columns__x1Kr7
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column___4MeB6
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            sty.freeBox__kNqvh
+                                          )}
+                                        >
+                                          {true ? (
+                                            <p.Stack
+                                              as={"div"}
+                                              hasGap={true}
+                                              className={classNames(
+                                                projectcss.all,
+                                                sty.freeBox__e2FYk
+                                              )}
+                                            >
+                                              <ProductBox
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.productBox__kRyVc
+                                                )}
+                                                id={
+                                                  "643aec1549d10500137ef4fe" as const
+                                                }
+                                              >
+                                                <ph.DataCtxReader>
+                                                  {$ctx => (
+                                                    <ProductTextField
+                                                      className={classNames(
+                                                        "__wab_instance",
+                                                        sty.productTextField__bjFki
+                                                      )}
+                                                      field={"name" as const}
+                                                    />
+                                                  )}
+                                                </ph.DataCtxReader>
+                                              </ProductBox>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text__pl6Nn
+                                                )}
+                                              >
+                                                {hasVariant(
+                                                  globalVariants,
+                                                  "screen",
+                                                  "mobileOnly"
+                                                )
+                                                  ? "The Double Queen Suite is our most popular room by far at Mount Rainier Lodging. With two queen beds, a walk-in shower + bathtub bathroom, a balcony view, and a small kitchenette, this is the best bang for your buck. Accommodates 1-4 people."
+                                                  : "NEED TO ADD DESCRIPTION\n\n$39.00"}
+                                              </div>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text__ub2Jf
+                                                )}
+                                              >
+                                                {"Tour Date"}
+                                              </div>
+                                              <TextInput
+                                                data-plasmic-name={"textInput3"}
+                                                data-plasmic-override={
+                                                  overrides.textInput3
+                                                }
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.textInput3
+                                                )}
+                                                onChange={(...eventArgs) => {
+                                                  p.generateStateOnChangeProp(
+                                                    $state,
+                                                    ["textInput3", "value"]
+                                                  )(
+                                                    (e =>
+                                                      e.target?.value).apply(
+                                                      null,
+                                                      eventArgs
+                                                    )
+                                                  );
+                                                }}
+                                                placeholder={
+                                                  "Check-in Date" as const
+                                                }
+                                                value={p.generateStateValueProp(
+                                                  $state,
+                                                  ["textInput3", "value"]
+                                                )}
+                                              />
+
+                                              <Button
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.button___6P9Tv
+                                                )}
+                                                color={"sand" as const}
+                                                link={
+                                                  "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                }
+                                              >
+                                                <a
+                                                  className={classNames(
+                                                    projectcss.all,
+                                                    projectcss.a,
+                                                    projectcss.__wab_text,
+                                                    sty.link__tjCrd
+                                                  )}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                  }
+                                                  target={"_blank" as const}
+                                                >
+                                                  {"See availability"}
+                                                </a>
+                                              </Button>
+                                            </p.Stack>
+                                          ) : null}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__kl1Jm
+                                        )}
+                                      >
+                                        <p.PlasmicImg
+                                          alt={""}
+                                          className={classNames(sty.img__bPo1)}
+                                          displayHeight={"100%" as const}
+                                          displayMaxHeight={"none" as const}
+                                          displayMaxWidth={"100%" as const}
+                                          displayMinHeight={"0" as const}
+                                          displayMinWidth={"0" as const}
+                                          displayWidth={"100%" as const}
+                                          loading={"lazy" as const}
+                                          src={{
+                                            src: image8YeOoCnLYw,
+                                            fullWidth: 1280,
+                                            fullHeight: 720,
+                                            aspectRatio: undefined
+                                          }}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                ) : null}
+                              </div>
+                            )}
+                          </ph.DataCtxReader>
+                        </ProductBox>
+                      </div>
+                    </div>
+                  ) : null}
+                </Reveal>
+              </ParallaxWrapper>
+              <ParallaxWrapper
+                className={classNames(
+                  "__wab_instance",
+                  sty.scrollParallax__t7Ah4
+                )}
+                disabled={true}
+                speed={20 as const}
+              >
+                <Reveal
+                  cascade={true}
+                  className={classNames("__wab_instance", sty.reveal__xBOxn)}
+                  delay={1.5 as const}
+                  direction={"left" as const}
+                  duration={1500 as const}
+                  effect={"slide" as const}
+                  reverse={false}
+                  triggerOnce={false}
+                >
+                  {true ? (
+                    <div
+                      data-plasmic-name={"section15"}
+                      data-plasmic-override={overrides.section15}
+                      className={classNames(projectcss.all, sty.section15)}
+                    >
+                      <div
+                        data-plasmic-name={"rowContainer11"}
+                        data-plasmic-override={overrides.rowContainer11}
+                        className={classNames(
+                          projectcss.all,
+                          sty.rowContainer11
+                        )}
+                      >
+                        <ProductBox
+                          className={classNames(
+                            "__wab_instance",
+                            sty.productBox__piLxa
+                          )}
+                          id={"63bb8d07ad447c0012f2cdb9" as const}
+                        >
+                          <ph.DataCtxReader>
+                            {$ctx => (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__r58Pa
+                                )}
+                              >
+                                {true ? (
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__oYson
+                                    )}
+                                  >
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.columns__aXzF
+                                      )}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__fuEl
+                                        )}
+                                      >
+                                        <div
+                                          className={classNames(
+                                            projectcss.all,
+                                            sty.freeBox__eYsPt
+                                          )}
+                                        >
+                                          {true ? (
+                                            <p.Stack
+                                              as={"div"}
+                                              hasGap={true}
+                                              className={classNames(
+                                                projectcss.all,
+                                                sty.freeBox__bfrLy
+                                              )}
+                                            >
+                                              <ProductBox
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.productBox__p4Vws
+                                                )}
+                                                id={
+                                                  "643aec2df8d529001207ae85" as const
+                                                }
+                                              >
+                                                <ph.DataCtxReader>
+                                                  {$ctx => (
+                                                    <ProductTextField
+                                                      className={classNames(
+                                                        "__wab_instance",
+                                                        sty.productTextField___7D5Mn
+                                                      )}
+                                                      field={"name" as const}
+                                                    />
+                                                  )}
+                                                </ph.DataCtxReader>
+                                              </ProductBox>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text__oTsvg
+                                                )}
+                                              >
+                                                {hasVariant(
+                                                  globalVariants,
+                                                  "screen",
+                                                  "mobileOnly"
+                                                )
+                                                  ? "The Double Queen Suite is our most popular room by far at Mount Rainier Lodging. With two queen beds, a walk-in shower + bathtub bathroom, a balcony view, and a small kitchenette, this is the best bang for your buck. Accommodates 1-4 people."
+                                                  : "NEED TO ADD DESCRIPTION\n\n$19.00"}
+                                              </div>
+                                              <div
+                                                className={classNames(
+                                                  projectcss.all,
+                                                  projectcss.__wab_text,
+                                                  sty.text___5FuVb
+                                                )}
+                                              >
+                                                {"Tour Date"}
+                                              </div>
+                                              <TextInput
+                                                data-plasmic-name={"textInput5"}
+                                                data-plasmic-override={
+                                                  overrides.textInput5
+                                                }
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.textInput5
+                                                )}
+                                                onChange={(...eventArgs) => {
+                                                  p.generateStateOnChangeProp(
+                                                    $state,
+                                                    ["textInput5", "value"]
+                                                  )(
+                                                    (e =>
+                                                      e.target?.value).apply(
+                                                      null,
+                                                      eventArgs
+                                                    )
+                                                  );
+                                                }}
+                                                placeholder={
+                                                  "Check-in Date" as const
+                                                }
+                                                value={p.generateStateValueProp(
+                                                  $state,
+                                                  ["textInput5", "value"]
+                                                )}
+                                              />
+
+                                              <Button
+                                                className={classNames(
+                                                  "__wab_instance",
+                                                  sty.button__q7GGm
+                                                )}
+                                                color={"sand" as const}
+                                                link={
+                                                  "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                }
+                                              >
+                                                <a
+                                                  className={classNames(
+                                                    projectcss.all,
+                                                    projectcss.a,
+                                                    projectcss.__wab_text,
+                                                    sty.link__w4Tvi
+                                                  )}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                  }
+                                                  target={"_blank" as const}
+                                                >
+                                                  {"See availability"}
+                                                </a>
+                                              </Button>
+                                            </p.Stack>
+                                          ) : null}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.column__fmwez
+                                        )}
+                                      >
+                                        <p.PlasmicImg
+                                          alt={""}
+                                          className={classNames(sty.img__l1Mh)}
+                                          displayHeight={"100%" as const}
+                                          displayMaxHeight={"none" as const}
+                                          displayMaxWidth={"100%" as const}
+                                          displayMinHeight={"0" as const}
+                                          displayMinWidth={"0" as const}
+                                          displayWidth={"100%" as const}
+                                          loading={"lazy" as const}
+                                          src={{
+                                            src: image8YeOoCnLYw,
+                                            fullWidth: 1280,
+                                            fullHeight: 720,
+                                            aspectRatio: undefined
+                                          }}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                ) : null}
+                              </div>
+                            )}
+                          </ph.DataCtxReader>
+                        </ProductBox>
+                      </div>
+                    </div>
+                  ) : null}
+                </Reveal>
+              </ParallaxWrapper>
+            </div>
             {true ? (
               <div className={classNames(projectcss.all, sty.freeBox__hKz6G)}>
                 {true ? (
@@ -424,8 +1135,17 @@ const PlasmicDescendants = {
     "h1",
     "section1",
     "rowContainer8",
-    "text",
     "embedHtml",
+    "brownColorBg",
+    "section13",
+    "rowContainer9",
+    "textInput",
+    "section14",
+    "rowContainer10",
+    "textInput3",
+    "section15",
+    "rowContainer11",
+    "textInput5",
     "footerTop",
     "footer",
     "footerBottom"
@@ -434,10 +1154,30 @@ const PlasmicDescendants = {
   container: ["container", "navBar", "h1"],
   navBar: ["navBar"],
   h1: ["h1"],
-  section1: ["section1", "rowContainer8", "text"],
-  rowContainer8: ["rowContainer8", "text"],
-  text: ["text"],
+  section1: ["section1", "rowContainer8"],
+  rowContainer8: ["rowContainer8"],
   embedHtml: ["embedHtml"],
+  brownColorBg: [
+    "brownColorBg",
+    "section13",
+    "rowContainer9",
+    "textInput",
+    "section14",
+    "rowContainer10",
+    "textInput3",
+    "section15",
+    "rowContainer11",
+    "textInput5"
+  ],
+  section13: ["section13", "rowContainer9", "textInput"],
+  rowContainer9: ["rowContainer9", "textInput"],
+  textInput: ["textInput"],
+  section14: ["section14", "rowContainer10", "textInput3"],
+  rowContainer10: ["rowContainer10", "textInput3"],
+  textInput3: ["textInput3"],
+  section15: ["section15", "rowContainer11", "textInput5"],
+  rowContainer11: ["rowContainer11", "textInput5"],
+  textInput5: ["textInput5"],
   footerTop: ["footerTop"],
   footer: ["footer"],
   footerBottom: ["footerBottom"]
@@ -453,8 +1193,17 @@ type NodeDefaultElementType = {
   h1: "h1";
   section1: "div";
   rowContainer8: "div";
-  text: "div";
   embedHtml: typeof Embed;
+  brownColorBg: "div";
+  section13: "div";
+  rowContainer9: "div";
+  textInput: typeof TextInput;
+  section14: "div";
+  rowContainer10: "div";
+  textInput3: typeof TextInput;
+  section15: "div";
+  rowContainer11: "div";
+  textInput5: typeof TextInput;
   footerTop: typeof FooterTop;
   footer: typeof Footer;
   footerBottom: typeof FooterBottom;
@@ -543,8 +1292,17 @@ export const PlasmicActivities = Object.assign(
     h1: makeNodeComponent("h1"),
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
-    text: makeNodeComponent("text"),
     embedHtml: makeNodeComponent("embedHtml"),
+    brownColorBg: makeNodeComponent("brownColorBg"),
+    section13: makeNodeComponent("section13"),
+    rowContainer9: makeNodeComponent("rowContainer9"),
+    textInput: makeNodeComponent("textInput"),
+    section14: makeNodeComponent("section14"),
+    rowContainer10: makeNodeComponent("rowContainer10"),
+    textInput3: makeNodeComponent("textInput3"),
+    section15: makeNodeComponent("section15"),
+    rowContainer11: makeNodeComponent("rowContainer11"),
+    textInput5: makeNodeComponent("textInput5"),
     footerTop: makeNodeComponent("footerTop"),
     footer: makeNodeComponent("footer"),
     footerBottom: makeNodeComponent("footerBottom"),

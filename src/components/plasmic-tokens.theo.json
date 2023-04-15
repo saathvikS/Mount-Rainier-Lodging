@@ -11,6 +11,16 @@
       }
     },
     {
+      "name": "Unnamed Style Token",
+      "type": "opacity",
+      "value": "100%",
+      "category": "opacity",
+      "meta": {
+        "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+        "id": "Oojw92V8U"
+      }
+    },
+    {
       "name": "heading-red",
       "type": "color",
       "value": "#000000",
