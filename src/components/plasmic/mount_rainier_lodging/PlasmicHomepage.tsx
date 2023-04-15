@@ -39,7 +39,6 @@ import Button from "../../Button"; // plasmic-import: 0GSRDNreqxvH/component
 import FooterTop from "../../FooterTop"; // plasmic-import: GuV31ro_WY/component
 import Footer from "../../Footer"; // plasmic-import: IDlLfPVadLh/component
 import FooterBottom from "../../FooterBottom"; // plasmic-import: rDEJujvel4T/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 
 import { useScreenVariants as useScreenVariantsjNh4R65QhDehJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jNH4r65QhDehJ/globalVariant
 
@@ -83,7 +82,6 @@ export type PlasmicHomepage__OverridesType = {
   footerTop?: p.Flex<typeof FooterTop>;
   footer?: p.Flex<typeof Footer>;
   footerBottom?: p.Flex<typeof FooterBottom>;
-  embedHtml?: p.Flex<typeof Embed>;
 };
 
 export interface DefaultHomepageProps {
@@ -918,15 +916,6 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.footerBottom}
             className={classNames("__wab_instance", sty.footerBottom)}
           />
-
-          <Embed
-            data-plasmic-name={"embedHtml"}
-            data-plasmic-override={overrides.embedHtml}
-            className={classNames("__wab_instance", sty.embedHtml)}
-            code={
-              "<!--Start of Tawk.to Script-->\r\n<script type=\"text/javascript\">\r\nvar Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\r\n(function(){\r\nvar s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\r\ns1.async=true;\r\ns1.src='https://embed.tawk.to/6438906a31ebfa0fe7f83058/1gtuf887t';\r\ns1.charset='UTF-8';\r\ns1.setAttribute('crossorigin','*');\r\ns0.parentNode.insertBefore(s1,s0);\r\n})();\r\n</script>\r\n<!--End of Tawk.to Script-->\r\n" as const
-            }
-          />
         </p.Stack>
       </div>
     </React.Fragment>
@@ -951,8 +940,7 @@ const PlasmicDescendants = {
     "rowContainer10",
     "footerTop",
     "footer",
-    "footerBottom",
-    "embedHtml"
+    "footerBottom"
   ],
   headerMainSection: ["headerMainSection", "container", "navBar", "h1"],
   container: ["container", "navBar", "h1"],
@@ -977,8 +965,7 @@ const PlasmicDescendants = {
   rowContainer10: ["rowContainer10"],
   footerTop: ["footerTop"],
   footer: ["footer"],
-  footerBottom: ["footerBottom"],
-  embedHtml: ["embedHtml"]
+  footerBottom: ["footerBottom"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1001,7 +988,6 @@ type NodeDefaultElementType = {
   footerTop: typeof FooterTop;
   footer: typeof Footer;
   footerBottom: typeof FooterBottom;
-  embedHtml: typeof Embed;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1097,7 +1083,6 @@ export const PlasmicHomepage = Object.assign(
     footerTop: makeNodeComponent("footerTop"),
     footer: makeNodeComponent("footer"),
     footerBottom: makeNodeComponent("footerBottom"),
-    embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

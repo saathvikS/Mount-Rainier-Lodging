@@ -32,6 +32,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 
 import { useScreenVariants as useScreenVariantsjNh4R65QhDehJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jNH4r65QhDehJ/globalVariant
 
@@ -53,7 +54,10 @@ export const PlasmicFooter__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicFooter__OverridesType = {
   root?: p.Flex<"div">;
+  freeBox?: p.Flex<"div">;
+  columns?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
+  embedHtml?: p.Flex<typeof Embed>;
 };
 
 export interface DefaultFooterProps {
@@ -109,41 +113,55 @@ function PlasmicFooter__RenderFunc(props: {
       )}
     >
       {true ? (
-        <div className={classNames(projectcss.all, sty.freeBox___6Z2WL)}>
-          {true ? (
-            <a
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.link__fVDch
-              )}
-              href={
-                hasVariant(globalVariants, "screen", "mobileOnly") ? `/` : `/`
-              }
-            >
-              <p.PlasmicImg
-                data-plasmic-name={"img"}
-                data-plasmic-override={overrides.img}
-                alt={""}
-                className={classNames(sty.img)}
-                displayHeight={"78px" as const}
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"165px" as const}
-                loading={"lazy" as const}
-                src={{
-                  src: mountRanierLodgingLogopngOhYdvXmLh,
-                  fullWidth: 351,
-                  fullHeight: 343,
-                  aspectRatio: undefined
-                }}
+        <div
+          data-plasmic-name={"freeBox"}
+          data-plasmic-override={overrides.freeBox}
+          className={classNames(projectcss.all, sty.freeBox)}
+        >
+          <div
+            data-plasmic-name={"columns"}
+            data-plasmic-override={overrides.columns}
+            className={classNames(projectcss.all, sty.columns)}
+          >
+            <div className={classNames(projectcss.all, sty.column__fqB7O)}>
+              <a
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__gquCq
+                )}
+                href={`/`}
+              >
+                <p.PlasmicImg
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={""}
+                  className={classNames(sty.img)}
+                  displayHeight={"78px" as const}
+                  displayMaxHeight={"none" as const}
+                  displayMaxWidth={"100%" as const}
+                  displayMinHeight={"0" as const}
+                  displayMinWidth={"0" as const}
+                  displayWidth={"165px" as const}
+                  loading={"lazy" as const}
+                  src={{
+                    src: mountRanierLodgingLogopngOhYdvXmLh,
+                    fullWidth: 351,
+                    fullHeight: 343,
+                    aspectRatio: undefined
+                  }}
+                />
+              </a>
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={
+                  '<!--Start of Tawk.to Script-->\r\n<script type="text/javascript">\r\nvar Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\r\n(function(){\r\nvar s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];\r\ns1.async=true;\r\ns1.src=\'https://embed.tawk.to/6438906a31ebfa0fe7f83058/1gtuf887t\';\r\ns1.charset=\'UTF-8\';\r\ns1.setAttribute(\'crossorigin\',\'*\');\r\ns0.parentNode.insertBefore(s1,s0);\r\n})();\r\n</script>\r\n<!--End of Tawk.to Script-->\r\n\r\n<div id="google_translate_element"></div>\r\n\r\n<script type="text/javascript">\r\nfunction googleTranslateElementInit() {\r\n  new google.translate.TranslateElement({pageLanguage: \'en\', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, \'google_translate_element\');\r\n}\r\n</script>\r\n\r\n<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>' as const
+                }
               />
-            </a>
-          ) : null}
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__xMSsy)}>
+            </div>
+            <div className={classNames(projectcss.all, sty.column__bknCg)}>
               <h3
                 className={classNames(
                   projectcss.all,
@@ -188,9 +206,7 @@ function PlasmicFooter__RenderFunc(props: {
                 {"Activities"}
               </a>
             </div>
-          ) : null}
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox___4MYr)}>
+            <div className={classNames(projectcss.all, sty.column__kNHed)}>
               <h3
                 className={classNames(
                   projectcss.all,
@@ -241,9 +257,7 @@ function PlasmicFooter__RenderFunc(props: {
                   : "Presidential "}
               </a>
             </div>
-          ) : null}
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__jHvxd)}>
+            <div className={classNames(projectcss.all, sty.column___4Kf5U)}>
               <h3
                 className={classNames(
                   projectcss.all,
@@ -266,9 +280,7 @@ function PlasmicFooter__RenderFunc(props: {
                 {"Contact Us"}
               </a>
             </div>
-          ) : null}
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__m55Am)}>
+            <div className={classNames(projectcss.all, sty.column___6Tm64)}>
               <h3
                 className={classNames(
                   projectcss.all,
@@ -315,7 +327,7 @@ function PlasmicFooter__RenderFunc(props: {
                   : "ToS"}
               </a>
             </div>
-          ) : null}
+          </div>
         </div>
       ) : null}
     </div>
@@ -323,15 +335,21 @@ function PlasmicFooter__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img"],
-  img: ["img"]
+  root: ["root", "freeBox", "columns", "img", "embedHtml"],
+  freeBox: ["freeBox", "columns", "img", "embedHtml"],
+  columns: ["columns", "img", "embedHtml"],
+  img: ["img"],
+  embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  freeBox: "div";
+  columns: "div";
   img: typeof p.PlasmicImg;
+  embedHtml: typeof Embed;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -394,7 +412,10 @@ export const PlasmicFooter = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
+    columns: makeNodeComponent("columns"),
     img: makeNodeComponent("img"),
+    embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicFooter
     internalVariantProps: PlasmicFooter__VariantProps,

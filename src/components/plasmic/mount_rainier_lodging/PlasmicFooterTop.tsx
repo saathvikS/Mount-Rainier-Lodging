@@ -33,11 +33,16 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
+import Button from "../../Button"; // plasmic-import: 0GSRDNreqxvH/component
+
+import { useScreenVariants as useScreenVariantsjNh4R65QhDehJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jNH4r65QhDehJ/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic_mount_rainier_lodging.module.css"; // plasmic-import: x2CpsrHBvuW1zdv5pEkF5Z/projectcss
 import sty from "./PlasmicFooterTop.module.css"; // plasmic-import: GuV31ro_WY/css
+
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: tDLsyY6XWLzrO/icon
 
 export type PlasmicFooterTop__VariantMembers = {};
 export type PlasmicFooterTop__VariantsArgs = {};
@@ -51,6 +56,10 @@ export const PlasmicFooterTop__ArgProps = new Array<ArgPropType>();
 export type PlasmicFooterTop__OverridesType = {
   root?: p.Flex<"div">;
   columns?: p.Flex<"div">;
+  embedHtml?: p.Flex<typeof Embed>;
+  h2?: p.Flex<"h2">;
+  h1?: p.Flex<"h1">;
+  button?: p.Flex<typeof Button>;
 };
 
 export interface DefaultFooterTopProps {
@@ -86,6 +95,10 @@ function PlasmicFooterTop__RenderFunc(props: {
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
 
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsjNh4R65QhDehJ()
+  });
+
   return (
     <div
       data-plasmic-name={"root"}
@@ -115,9 +128,11 @@ function PlasmicFooterTop__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.freeBox__mdLc6)}
               >
                 <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__nRgGv)}
+                  data-plasmic-name={"embedHtml"}
+                  data-plasmic-override={overrides.embedHtml}
+                  className={classNames("__wab_instance", sty.embedHtml)}
                   code={
-                    '<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup" style="background:#393434; color:#ffffff">\r\n    <form action="https://lwsd.us21.list-manage.com/subscribe/post?u=fd9c336fea02af2113f642f70&amp;id=b6b7322ee8&amp;f_id=00e5eae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2 style="font-family: Playfair-display; font-size: 50px;font-weight: normal;">Stay posted on special offers and promos.</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL" style="font: Monsterrat; font-size: 17px;">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME" style="font: monsterrat; font-size: 17px;">First Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME" style="font: monsterrat; font-size: 17px;">Last Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>\r\n\t\r\n</div>\r\n\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fd9c336fea02af2113f642f70_b6b7322ee8" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#717069; margin-top:10px">\r\n                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->' as const
+                    '<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup" style="background:rgba(0,0,0,0); color:#ffffff">\r\n    <form action="https://lwsd.us21.list-manage.com/subscribe/post?u=fd9c336fea02af2113f642f70&amp;id=b6b7322ee8&amp;f_id=00e5eae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2 style="font-family: Playfair-display; font-size: 50px;font-weight: normal;">Stay posted on special offers and promos.</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL" style="font: Monsterrat; font-size: 17px;">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME"style="font: Monsterrat; font-size: 17px;">First Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME"style="font: Monsterrat; font-size: 17px;">Last Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>\r\n\t\r\n</div>\r\n\r\n\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fd9c336fea02af2113f642f70_b6b7322ee8" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#717069; margin-top: 15px;">\r\n                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';fnames[6]=\'MMERGE6\';ftypes[6]=\'text\';fnames[7]=\'MMERGE7\';ftypes[7]=\'text\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->' as const
                   }
                 />
               </p.Stack>
@@ -130,12 +145,65 @@ function PlasmicFooterTop__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__eK8Aw)}
               >
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__vpXxR)}
-                  code={
-                    '<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup" style="background:rgba(0,0,0,0); color:#ffffff">\r\n    <form action="https://lwsd.us21.list-manage.com/subscribe/post?u=fd9c336fea02af2113f642f70&amp;id=b6b7322ee8&amp;f_id=00e5eae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2 style="font-family: Playfair-display; font-size: 50px;font-weight: normal;">Contact Us</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL" style="font: Monsterrat; font-size: 17px;">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME"style="font: Monsterrat; font-size: 17px;">First Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME"style="font: Monsterrat; font-size: 17px;">Last Name  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-MMERGE6"style="font: Monsterrat; font-size: 17px;">Subject  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="MMERGE6" class="required" id="mce-MMERGE6" required>\r\n\t\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-MMERGE7"style="font: Monsterrat; font-size: 17px;">Message  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="text" value="" name="MMERGE7" class="required" id="mce-MMERGE7" required>\r\n\t\r\n</div>\r\n\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fd9c336fea02af2113f642f70_b6b7322ee8" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="button" style="background:#717069; margin-top: 15px;">\r\n                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';fnames[6]=\'MMERGE6\';ftypes[6]=\'text\';fnames[7]=\'MMERGE7\';ftypes[7]=\'text\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->' as const
+                <h2
+                  data-plasmic-name={"h2"}
+                  data-plasmic-override={overrides.h2}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h1
+                        data-plasmic-name={"h1"}
+                        data-plasmic-override={overrides.h1}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1
+                        )}
+                      >
+                        {"Contact us"}
+                      </h1>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </h2>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__dlSvc
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "Our hotel provides a range of amenities to ensure a comfortable and memorable stay. From on-site dining to a wellness center, we have everything needed to ensure everyone has a spectacular time at the hotel."
+                    : "If you wish to contact us for any questions, concerns, or inquiries you may have, please do not hesitate to do so. Just click the button below!"}
+                </div>
+                <Button
+                  data-plasmic-name={"button"}
+                  data-plasmic-override={overrides.button}
+                  className={classNames("__wab_instance", sty.button)}
+                  color={"sand" as const}
+                  link={
+                    "https://us21.list-manage.com/contact-form?u=fd9c336fea02af2113f642f70&form_id=b4dd73f277a387172f28dd7fe81c0a0e" as const
                   }
-                />
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__j9OG6
+                    )}
+                  >
+                    {"Contact us"}
+                  </div>
+                </Button>
               </p.Stack>
             ) : null}
           </div>
@@ -146,8 +214,12 @@ function PlasmicFooterTop__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "columns"],
-  columns: ["columns"]
+  root: ["root", "columns", "embedHtml", "h2", "h1", "button"],
+  columns: ["columns", "embedHtml", "h2", "h1", "button"],
+  embedHtml: ["embedHtml"],
+  h2: ["h2", "h1"],
+  h1: ["h1"],
+  button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -155,6 +227,10 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   columns: "div";
+  embedHtml: typeof Embed;
+  h2: "h2";
+  h1: "h1";
+  button: typeof Button;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -218,6 +294,10 @@ export const PlasmicFooterTop = Object.assign(
   {
     // Helper components rendering sub-elements
     columns: makeNodeComponent("columns"),
+    embedHtml: makeNodeComponent("embedHtml"),
+    h2: makeNodeComponent("h2"),
+    h1: makeNodeComponent("h1"),
+    button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicFooterTop
     internalVariantProps: PlasmicFooterTop__VariantProps,

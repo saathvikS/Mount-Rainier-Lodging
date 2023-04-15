@@ -15,12 +15,6 @@ import * as React from "react";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
-import {
-  usePlasmicDataConfig,
-  executePlasmicDataOp,
-  useDependencyAwareQuery
-} from "@plasmicapp/react-web/lib/data-sources";
 
 import {
   hasVariant,
@@ -39,6 +33,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavBarButtons from "../../NavBarButtons"; // plasmic-import: iSh5ehqohY/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 
 import { useScreenVariants as useScreenVariantsjNh4R65QhDehJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jNH4r65QhDehJ/globalVariant
 
@@ -63,6 +58,7 @@ export type PlasmicNavBar__OverridesType = {
   menuBar?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
   freeBox?: p.Flex<"div">;
+  embedHtml?: p.Flex<typeof Embed>;
 };
 
 export interface DefaultNavBarProps {
@@ -97,9 +93,6 @@ function PlasmicNavBar__RenderFunc(props: {
 
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
-
-  const dataSourcesCtx = usePlasmicDataSourceContext();
-  const { cache, mutate } = usePlasmicDataConfig();
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsjNh4R65QhDehJ()
@@ -219,231 +212,26 @@ function PlasmicNavBar__RenderFunc(props: {
               {"About Us"}
             </a>
           </NavBarButtons>
-          {(() => {
-            try {
-              return currentUser.isLoggedIn;
-            } catch (e) {
-              if (e instanceof TypeError) {
-                return true;
-              }
-              throw e;
+          <Embed
+            data-plasmic-name={"embedHtml"}
+            data-plasmic-override={overrides.embedHtml}
+            className={classNames("__wab_instance", sty.embedHtml)}
+            code={
+              '<script async src="https://cse.google.com/cse.js?cx=503941e8d2aaa4444">\r\n</script>\r\n<div class="gcse-search"></div>' as const
             }
-          })() ? (
-            <NavBarButtons
-              className={classNames("__wab_instance", sty.navBarButtons__aA3ZN)}
-            >
-              <a
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
-                  sty.link__sziWr
-                )}
-                href={`/account`}
-              >
-                {"Account"}
-              </a>
-            </NavBarButtons>
-          ) : null}
+          />
         </p.Stack>
-        <NavBarButtons
-          className={classNames("__wab_instance", sty.navBarButtons__x8P4)}
-        >
-          <a
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.__wab_text,
-              sty.link__l7Tdb
-            )}
-            href={undefined}
-            onClick={async event => {
-              const $steps = {};
-              $steps["login"] = true
-                ? (() => {
-                    const actionArgs = {};
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "login",
-                        interactionUuid: "ZOg5wDeeq",
-                        componentUuid: "1afyPt5Gh0q"
-                      },
-                      () =>
-                        (async ({ continueTo }) => {
-                          function uuidv4() {
-                            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(
-                              /[018]/g,
-                              c =>
-                                (
-                                  c ^
-                                  (crypto.getRandomValues(
-                                    new Uint8Array(1)
-                                  )[0] &
-                                    (15 >> (c / 4)))
-                                ).toString(16)
-                            );
-                          }
-
-                          async function sha256(text) {
-                            const encoder = new TextEncoder();
-                            const data = encoder.encode(text);
-                            const hashBuffer = await crypto.subtle.digest(
-                              "SHA-256",
-                              data
-                            );
-                            const hashArray = Array.from(
-                              new Uint8Array(hashBuffer)
-                            );
-                            const hashHex = hashArray
-                              .map(b => b.toString(16).padStart(2, "0"))
-                              .join("");
-                            return hashHex;
-                          }
-
-                          const state = JSON.stringify({
-                            continueTo: continueTo || window.location.href
-                          });
-                          const code_verifier = uuidv4();
-                          localStorage.setItem("code_verifier", code_verifier);
-                          const code_challenge = await sha256(code_verifier);
-
-                          const params = new URLSearchParams();
-                          params.set("client_id", "x2CpsrHBvuW1zdv5pEkF5Z");
-                          params.set("state", state);
-                          params.set("response_type", "code");
-                          params.set("code_challenge", code_challenge);
-                          params.set("code_challenge_method", "S256");
-
-                          if (dataSourcesCtx?.authRedirectUri) {
-                            params.set(
-                              "redirect_uri",
-                              dataSourcesCtx.authRedirectUri
-                            );
-                          }
-
-                          if (window.__PLASMIC_AUTH_OVERRIDE) {
-                            window.__PLASMIC_AUTH_OVERRIDE();
-                          } else {
-                            const url = `https://studio.plasmic.app/authorize?${params.toString()}`;
-                            window.location.assign(url);
-                          }
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["login"] === "object" &&
-                typeof $steps["login"].then === "function"
-              ) {
-                $steps["login"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "login",
-                    interactionUuid: "ZOg5wDeeq",
-                    componentUuid: "1afyPt5Gh0q"
-                  },
-                  $steps["login"]
-                );
-              }
-              $steps["airtableCreate"] = true
-                ? (() => {
-                    const actionArgs = {
-                      dataOp: __wrapUserFunction(
-                        {
-                          type: "InteractionArgLoc",
-                          actionName: "dataSourceOp",
-                          interactionUuid: "EMh0ACuvr",
-                          componentUuid: "1afyPt5Gh0q",
-                          argName: "dataOp"
-                        },
-                        () => ({
-                          sourceId: "2eNRs8vDuq79kWo1T8bmFo",
-                          opId: "219876ef44e6d71918d76e794931de9cb4e939ea69a57a5748a761b99224574c42dec7c2de19c92295aff463df5767e972775e26b9b5b752b554a5553dcc98b4f1d227b022516b78e70adbc2c1911f399138c08deb9d7cd7018e49b9fefd6e020bb196fcda212a1c48db82227b8fbf11b82121f2d2d0daf76626fdcba80b265360cb5058c13df0f2f13a",
-                          userArgs: {},
-                          cacheKey: null,
-                          invalidatedKeys: ["plasmic_refresh_all"],
-                          roleId: null
-                        })
-                      )
-                    };
-                    return __wrapUserFunction(
-                      {
-                        type: "InteractionLoc",
-                        actionName: "dataSourceOp",
-                        interactionUuid: "EMh0ACuvr",
-                        componentUuid: "1afyPt5Gh0q"
-                      },
-                      () =>
-                        (async ({ dataOp, continueOnError }) => {
-                          try {
-                            const response = await executePlasmicDataOp(
-                              dataOp,
-                              { userAuthToken: dataSourcesCtx?.userAuthToken }
-                            );
-                            if (
-                              dataOp.invalidatedKeys.find(
-                                key => key === "plasmic_refresh_all"
-                              )
-                            ) {
-                              Array.from(cache.keys()).forEach(key => {
-                                mutate(key);
-                              });
-                              return response;
-                            }
-                            dataOp.invalidatedKeys?.forEach(invalidateKey =>
-                              Array.from(cache.keys()).forEach(key => {
-                                if (
-                                  typeof key === "string" &&
-                                  key.includes(`.$.${invalidateKey}.$.`)
-                                ) {
-                                  mutate(key);
-                                }
-                              })
-                            );
-
-                            return response;
-                          } catch (e) {
-                            if (!continueOnError) {
-                              throw e;
-                            }
-                            return e;
-                          }
-                        })?.apply(null, [actionArgs]),
-                      actionArgs
-                    );
-                  })()
-                : undefined;
-              if (
-                typeof $steps["airtableCreate"] === "object" &&
-                typeof $steps["airtableCreate"].then === "function"
-              ) {
-                $steps["airtableCreate"] = await __wrapUserPromise(
-                  {
-                    type: "InteractionLoc",
-                    actionName: "dataSourceOp",
-                    interactionUuid: "EMh0ACuvr",
-                    componentUuid: "1afyPt5Gh0q"
-                  },
-                  $steps["airtableCreate"]
-                );
-              }
-            }}
-          >
-            {"Sign In"}
-          </a>
-        </NavBarButtons>
       </p.Stack>
     </p.Stack>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  menu: ["menu", "menuBar", "img", "freeBox"],
-  menuBar: ["menuBar", "img", "freeBox"],
+  menu: ["menu", "menuBar", "img", "freeBox", "embedHtml"],
+  menuBar: ["menuBar", "img", "freeBox", "embedHtml"],
   img: ["img"],
-  freeBox: ["freeBox"]
+  freeBox: ["freeBox", "embedHtml"],
+  embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -453,6 +241,7 @@ type NodeDefaultElementType = {
   menuBar: "div";
   img: typeof p.PlasmicImg;
   freeBox: "div";
+  embedHtml: typeof Embed;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -518,6 +307,7 @@ export const PlasmicNavBar = Object.assign(
     menuBar: makeNodeComponent("menuBar"),
     img: makeNodeComponent("img"),
     freeBox: makeNodeComponent("freeBox"),
+    embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicNavBar
     internalVariantProps: PlasmicNavBar__VariantProps,
