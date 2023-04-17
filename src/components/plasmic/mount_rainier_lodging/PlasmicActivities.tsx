@@ -476,7 +476,9 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__oyAb3
                                                   )}
-                                                  href={"" as const}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/JYRb0cSM" as const
+                                                  }
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
@@ -697,7 +699,9 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__tjCrd
                                                   )}
-                                                  href={"" as const}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/NRvgZWs2" as const
+                                                  }
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
@@ -916,7 +920,9 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__w4Tvi
                                                   )}
-                                                  href={"" as const}
+                                                  href={
+                                                    "https://mount-ranier-lodging.swell.store/buy/C7xctJye" as const
+                                                  }
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
