@@ -76,7 +76,8 @@ export type PlasmicActivities__OverridesType = {
   h1?: p.Flex<"h1">;
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
-  embedHtml?: p.Flex<typeof Embed>;
+  section12?: p.Flex<"div">;
+  rowContainer12?: p.Flex<"div">;
   brownColorBg?: p.Flex<"div">;
   section13?: p.Flex<"div">;
   rowContainer9?: p.Flex<"div">;
@@ -279,9 +280,7 @@ function PlasmicActivities__RenderFunc(props: {
                 triggerOnce={false}
               >
                 <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
+                  className={classNames("__wab_instance", sty.embedHtml__esyzi)}
                   code={
                     hasVariant(globalVariants, "screen", "mobileOnly")
                       ? ('<iframe src="https://www.google.com/maps/d/embed?mid=1UQg1ZbkHPmFcp0mHLIoG3WnRZYe4ExQ&ehbc=2E312F" width="400" height="489"></iframe>' as const)
@@ -296,6 +295,84 @@ function PlasmicActivities__RenderFunc(props: {
             duration={2000 as const}
             triggerOnce={false}
           >
+            {true ? (
+              <div className={classNames(projectcss.all, sty.freeBox__ckhxp)}>
+                <div
+                  data-plasmic-name={"section12"}
+                  data-plasmic-override={overrides.section12}
+                  className={classNames(projectcss.all, sty.section12)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.columns__gOc80)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.column___2NkxS)}
+                    >
+                      <Reveal
+                        className={classNames(
+                          "__wab_instance",
+                          sty.reveal__bqJp7
+                        )}
+                        duration={2000 as const}
+                        triggerOnce={false}
+                      >
+                        <p.Stack
+                          as={"div"}
+                          data-plasmic-name={"rowContainer12"}
+                          data-plasmic-override={overrides.rowContainer12}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.rowContainer12
+                          )}
+                        >
+                          <h2
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h2,
+                              projectcss.__wab_text,
+                              sty.h2__zfJnh
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "Get your free tour consultation today."
+                              : "Get your free tour consultation today."}
+                          </h2>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___0RZwT
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "We are proud to offer a free tour consultation service complimentary with a booked stay with us! Simply book an online meeting with one of our professional tour guide representatives and they will help guide you through all your different options here at Mount Rainier and how to best spend your time based on your situation."
+                              : "We are proud to offer a free tour consultation service complimentary with a booked stay with us! Simply book an online meeting with one of our professional tour guide representatives and they will help guide you through all your different options here at Mount Rainier and how to best spend your time based on your situation."}
+                          </div>
+                        </p.Stack>
+                      </Reveal>
+                    </div>
+                  </div>
+                </div>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__nSTrS)}
+                  duration={3000 as const}
+                  triggerOnce={false}
+                >
+                  <Embed
+                    className={classNames(
+                      "__wab_instance",
+                      sty.embedHtml__imigI
+                    )}
+                    code={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? ('<script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; " id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/d4c7338d-e4a1-469d-b80c-5ec746ce10d4"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Settings/book-now-blue.svg" alt="Book an appointment with Saathvik Somujayabalan using Setmore"/></a>\r\n' as const)
+                        : ('<script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; " id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/d4c7338d-e4a1-469d-b80c-5ec746ce10d4"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Settings/book-now-blue.svg" alt="Book an appointment with Saathvik Somujayabalan using Setmore"/></a>\r\n' as const)
+                    }
+                  />
+                </Reveal>
+              </div>
+            ) : null}
             <div
               data-plasmic-name={"brownColorBg"}
               data-plasmic-override={overrides.brownColorBg}
@@ -1138,7 +1215,8 @@ const PlasmicDescendants = {
     "h1",
     "section1",
     "rowContainer8",
-    "embedHtml",
+    "section12",
+    "rowContainer12",
     "brownColorBg",
     "section13",
     "rowContainer9",
@@ -1159,7 +1237,8 @@ const PlasmicDescendants = {
   h1: ["h1"],
   section1: ["section1", "rowContainer8"],
   rowContainer8: ["rowContainer8"],
-  embedHtml: ["embedHtml"],
+  section12: ["section12", "rowContainer12"],
+  rowContainer12: ["rowContainer12"],
   brownColorBg: [
     "brownColorBg",
     "section13",
@@ -1196,7 +1275,8 @@ type NodeDefaultElementType = {
   h1: "h1";
   section1: "div";
   rowContainer8: "div";
-  embedHtml: typeof Embed;
+  section12: "div";
+  rowContainer12: "div";
   brownColorBg: "div";
   section13: "div";
   rowContainer9: "div";
@@ -1295,7 +1375,8 @@ export const PlasmicActivities = Object.assign(
     h1: makeNodeComponent("h1"),
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
-    embedHtml: makeNodeComponent("embedHtml"),
+    section12: makeNodeComponent("section12"),
+    rowContainer12: makeNodeComponent("rowContainer12"),
     brownColorBg: makeNodeComponent("brownColorBg"),
     section13: makeNodeComponent("section13"),
     rowContainer9: makeNodeComponent("rowContainer9"),
