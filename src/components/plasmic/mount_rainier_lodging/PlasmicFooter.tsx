@@ -206,13 +206,13 @@ function PlasmicFooter__RenderFunc(props: {
                 {"Activities"}
               </a>
             </div>
-            <div className={classNames(projectcss.all, sty.column__kNHed)}>
+            <div className={classNames(projectcss.all, sty.column___1HD7J)}>
               <h3
                 className={classNames(
                   projectcss.all,
                   projectcss.h3,
                   projectcss.__wab_text,
-                  sty.h3__j6Lb
+                  sty.h3___2Ko66
                 )}
               >
                 {"Rooms"}
@@ -222,7 +222,7 @@ function PlasmicFooter__RenderFunc(props: {
                   projectcss.all,
                   projectcss.a,
                   projectcss.__wab_text,
-                  sty.link__cMrue
+                  sty.link__j1MtN
                 )}
                 href={`/rooms`}
               >
@@ -235,7 +235,7 @@ function PlasmicFooter__RenderFunc(props: {
                   projectcss.all,
                   projectcss.a,
                   projectcss.__wab_text,
-                  sty.link__q9Vj
+                  sty.link__gvVy
                 )}
                 href={`/rooms`}
               >
@@ -248,7 +248,7 @@ function PlasmicFooter__RenderFunc(props: {
                   projectcss.all,
                   projectcss.a,
                   projectcss.__wab_text,
-                  sty.link___4LLjv
+                  sty.link__xz4Bb
                 )}
                 href={`/rooms`}
               >

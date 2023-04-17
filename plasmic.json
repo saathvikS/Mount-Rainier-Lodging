@@ -519,6 +519,19 @@
           "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicTermsOfService.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "RxO7TV-6tk",
+          "name": "SearchBar",
+          "type": "managed",
+          "projectId": "x2CpsrHBvuW1zdv5pEkF5Z",
+          "renderModuleFilePath": "plasmic/mount_rainier_lodging/PlasmicSearchBar.tsx",
+          "importSpec": {
+            "modulePath": "SearchBar.tsx"
+          },
+          "cssFilePath": "plasmic/mount_rainier_lodging/PlasmicSearchBar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -758,6 +771,26 @@
           "id": "ohYDVXmLH",
           "name": "Mount Ranier Lodging Logo.png",
           "filePath": "plasmic/mount_rainier_lodging/images/mountRanierLodgingLogopng.png"
+        },
+        {
+          "id": "goIgZZ6h2",
+          "name": "image 21",
+          "filePath": "plasmic/mount_rainier_lodging/images/image21.png"
+        },
+        {
+          "id": "-9qZVtBRv",
+          "name": "image 22",
+          "filePath": "plasmic/mount_rainier_lodging/images/image22.png"
+        },
+        {
+          "id": "k76gINVm9",
+          "name": "image 23",
+          "filePath": "plasmic/mount_rainier_lodging/images/image23.png"
+        },
+        {
+          "id": "yWcijSOBi",
+          "name": "image 24",
+          "filePath": "plasmic/mount_rainier_lodging/images/image24.png"
         }
       ],
       "indirect": false,

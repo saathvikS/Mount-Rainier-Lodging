@@ -35,6 +35,7 @@ import {
 import NavBar from "../../NavBar"; // plasmic-import: 1afyPt5Gh0q/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax"; // plasmic-import: bozP4lLlAZ/codeComponent
+import FooterTop from "../../FooterTop"; // plasmic-import: GuV31ro_WY/component
 import Footer from "../../Footer"; // plasmic-import: IDlLfPVadLh/component
 import FooterBottom from "../../FooterBottom"; // plasmic-import: rDEJujvel4T/component
 
@@ -45,7 +46,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_mount_rainier_lodging.module.css"; // plasmic-import: x2CpsrHBvuW1zdv5pEkF5Z/projectcss
 import sty from "./PlasmicCopyright.module.css"; // plasmic-import: p0_sDHQLeb/css
 
-import image60EYproaUs from "./images/image6.png"; // plasmic-import: 0eYproaUs/picture
 import mjTangonanOe6QLhRHhhsUnsplashjpgVemFsLYeBbSm from "./images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"; // plasmic-import: vemFS-lYeBbSm/picture
 import coconut1JpgOmLgcR2KgB0Ci from "./images/coconut1Jpg.jpeg"; // plasmic-import: OmLgcR2KgB0Ci/picture
 
@@ -67,6 +67,7 @@ export type PlasmicCopyright__OverridesType = {
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
   text?: p.Flex<"div">;
+  footerTop?: p.Flex<typeof FooterTop>;
   footer?: p.Flex<typeof Footer>;
   footerBottom?: p.Flex<typeof FooterBottom>;
 };
@@ -210,30 +211,6 @@ function PlasmicCopyright__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.column___0N9Ko
-                        )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__tOkpv)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: image60EYproaUs,
-                            fullWidth: 724,
-                            fullHeight: 484,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
                           sty.column__gbnlc
                         )}
                       >
@@ -257,7 +234,7 @@ function PlasmicCopyright__RenderFunc(props: {
                           >
                             {hasVariant(globalVariants, "screen", "mobileOnly")
                               ? "About our hotel"
-                              : "About our resort"}
+                              : "Copyright"}
                           </h2>
                           <div
                             data-plasmic-name={"text"}
@@ -270,7 +247,7 @@ function PlasmicCopyright__RenderFunc(props: {
                           >
                             {hasVariant(globalVariants, "screen", "mobileOnly")
                               ? "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."
-                              : "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."}
+                              : "Copyright © 2023 Mount Rainier Lodging. All rights reserved.\n\nThe content, design, graphics, and other materials on this website are protected by United States and international copyright laws and may not be reproduced, distributed, transmitted, displayed, or otherwise used without the prior written permission of Mount Rainier Lodging.\n\nMount Rainier Lodging is a registered trademark of Mount Rainier Lodging, and all other trademarks and service marks appearing on this website are the property of their respective owners.\n\nBy accessing and using this website, you agree to abide by all copyright and other proprietary notices, legends or other restrictions contained in any such content and will not make any unauthorized use of the materials on this website."}
                           </div>
                         </p.Stack>
                       </div>
@@ -402,6 +379,12 @@ function PlasmicCopyright__RenderFunc(props: {
               ) : null}
             </div>
           ) : null}
+          <FooterTop
+            data-plasmic-name={"footerTop"}
+            data-plasmic-override={overrides.footerTop}
+            className={classNames("__wab_instance", sty.footerTop)}
+          />
+
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
           ) ? (
@@ -432,6 +415,7 @@ const PlasmicDescendants = {
     "section1",
     "rowContainer8",
     "text",
+    "footerTop",
     "footer",
     "footerBottom"
   ],
@@ -442,6 +426,7 @@ const PlasmicDescendants = {
   section1: ["section1", "rowContainer8", "text"],
   rowContainer8: ["rowContainer8", "text"],
   text: ["text"],
+  footerTop: ["footerTop"],
   footer: ["footer"],
   footerBottom: ["footerBottom"]
 } as const;
@@ -457,6 +442,7 @@ type NodeDefaultElementType = {
   section1: "div";
   rowContainer8: "div";
   text: "div";
+  footerTop: typeof FooterTop;
   footer: typeof Footer;
   footerBottom: typeof FooterBottom;
 };
@@ -545,6 +531,7 @@ export const PlasmicCopyright = Object.assign(
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
     text: makeNodeComponent("text"),
+    footerTop: makeNodeComponent("footerTop"),
     footer: makeNodeComponent("footer"),
     footerBottom: makeNodeComponent("footerBottom"),
 

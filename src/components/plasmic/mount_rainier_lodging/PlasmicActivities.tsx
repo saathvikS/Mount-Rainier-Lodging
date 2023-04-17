@@ -53,8 +53,9 @@ import sty from "./PlasmicActivities.module.css"; // plasmic-import: 8y0EWuFHRBh
 
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: f4b226_qaFgSE/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: tDLsyY6XWLzrO/icon
-import image77Nl4At013 from "./images/image7.jpeg"; // plasmic-import: 7NL4at013/picture
-import image8YeOoCnLYw from "./images/image8.jpeg"; // plasmic-import: yeOOCnLYw/picture
+import image21GoIgZz6H2 from "./images/image21.png"; // plasmic-import: goIgZZ6h2/picture
+import image23K76GInVm9 from "./images/image23.png"; // plasmic-import: k76gINVm9/picture
+import image24YWcijSoBi from "./images/image24.png"; // plasmic-import: yWcijSOBi/picture
 import mjTangonanOe6QLhRHhhsUnsplashjpgVemFsLYeBbSm from "./images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"; // plasmic-import: vemFS-lYeBbSm/picture
 import coconut1JpgOmLgcR2KgB0Ci from "./images/coconut1Jpg.jpeg"; // plasmic-import: OmLgcR2KgB0Ci/picture
 
@@ -416,8 +417,8 @@ function PlasmicActivities__RenderFunc(props: {
                                                   "screen",
                                                   "mobileOnly"
                                                 )
-                                                  ? "This is the economy suite we offer. The Standard Suite comes with a single queen bed, a single walk-in shower bathroom and a balcony view. Accommodates for 1-2 people.\n\n$129.00"
-                                                  : "NEED TO ADD DESCRIPTION\n\n$89.00"}
+                                                  ? "Experience the thrill of off-road adventure with our ATV tours! Our specially designed all-terrain vehicles will take you on a journey through rugged terrains, beautiful forests, and treacherous mountains. Our expert guides will lead you on an exhilarating tour, showing you breathtaking views of the surrounding landscapes and wildlife. Perfect for individuals, families, and groups, our ATV tours are the ultimate way to explore the great outdoors and create unforgettable memories. Book your tour today and get ready for an adrenaline-fueled adventure!\n\n$89.00"
+                                                  : "Experience the thrill of off-road adventure with our ATV tours! Our specially designed all-terrain vehicles will take you on a journey through rugged terrains, beautiful forests, and treacherous mountains. Our expert guides will lead you on an exhilarating tour, showing you breathtaking views of the surrounding landscapes and wildlife. Perfect for individuals, families, and groups, our ATV tours are the ultimate way to explore the great outdoors and create unforgettable memories. Book your tour today and get ready for an adrenaline-fueled adventure!\n\n$89.00"}
                                               </div>
                                               <div
                                                 className={classNames(
@@ -495,18 +496,20 @@ function PlasmicActivities__RenderFunc(props: {
                                       >
                                         <p.PlasmicImg
                                           alt={""}
-                                          className={classNames(sty.img__aksNs)}
-                                          displayHeight={"100%" as const}
+                                          className={classNames(
+                                            sty.img___8Mzcx
+                                          )}
+                                          displayHeight={"1035px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}
                                           displayMinWidth={"0" as const}
-                                          displayWidth={"100%" as const}
+                                          displayWidth={"578px" as const}
                                           loading={"lazy" as const}
                                           src={{
-                                            src: image77Nl4At013,
-                                            fullWidth: 1280,
-                                            fullHeight: 720,
+                                            src: image21GoIgZz6H2,
+                                            fullWidth: 616,
+                                            fullHeight: 462,
                                             aspectRatio: undefined
                                           }}
                                         />
@@ -637,8 +640,8 @@ function PlasmicActivities__RenderFunc(props: {
                                                   "screen",
                                                   "mobileOnly"
                                                 )
-                                                  ? "The Double Queen Suite is our most popular room by far at Mount Rainier Lodging. With two queen beds, a walk-in shower + bathtub bathroom, a balcony view, and a small kitchenette, this is the best bang for your buck. Accommodates 1-4 people."
-                                                  : "NEED TO ADD DESCRIPTION\n\n$39.00"}
+                                                  ? "Take your adventure to new heights with our zipline tours! Soar above the treetops and breathtaking landscapes on an exhilarating journey that will leave you with unforgettable memories. Whether you're seeking a solo adventure or a fun family outing, our zipline tours offer an experience unlike any other. Book your tour today and discover the beauty of nature from a whole new perspective!"
+                                                  : "Take your adventure to new heights with our zipline tours! Soar above the treetops and breathtaking landscapes on an exhilarating journey that will leave you with unforgettable memories. Whether you're seeking a solo adventure or a fun family outing, our zipline tours offer an experience unlike any other. Book your tour today and discover the beauty of nature from a whole new perspective!\n \n$39.00"}
                                               </div>
                                               <div
                                                 className={classNames(
@@ -716,18 +719,18 @@ function PlasmicActivities__RenderFunc(props: {
                                       >
                                         <p.PlasmicImg
                                           alt={""}
-                                          className={classNames(sty.img__bPo1)}
-                                          displayHeight={"100%" as const}
+                                          className={classNames(sty.img__rQiba)}
+                                          displayHeight={"875px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}
                                           displayMinWidth={"0" as const}
-                                          displayWidth={"100%" as const}
+                                          displayWidth={"auto" as const}
                                           loading={"lazy" as const}
                                           src={{
-                                            src: image8YeOoCnLYw,
+                                            src: image23K76GInVm9,
                                             fullWidth: 1280,
-                                            fullHeight: 720,
+                                            fullHeight: 853,
                                             aspectRatio: undefined
                                           }}
                                         />
@@ -858,8 +861,8 @@ function PlasmicActivities__RenderFunc(props: {
                                                   "screen",
                                                   "mobileOnly"
                                                 )
-                                                  ? "The Double Queen Suite is our most popular room by far at Mount Rainier Lodging. With two queen beds, a walk-in shower + bathtub bathroom, a balcony view, and a small kitchenette, this is the best bang for your buck. Accommodates 1-4 people."
-                                                  : "NEED TO ADD DESCRIPTION\n\n$19.00"}
+                                                  ? "Discover the beauty of nature on our hiking tours! Led by experienced guides, our tours offer an unforgettable way to explore the great outdoors and connect with the natural world. Our tours take you through some of the most breathtaking landscapes, from rugged mountains and dense forests to scenic coastlines and serene meadows. Along the way, you'll learn about the local flora and fauna, as well as the history and culture of the region. Our guides are passionate about the outdoors and will provide insights and stories that will deepen your appreciation for nature."
+                                                  : "Discover the beauty of nature on our hiking tours! Led by experienced guides, our tours offer an unforgettable way to explore the great outdoors and connect with the natural world. Our tours take you through some of the most breathtaking landscapes, from rugged mountains and dense forests to scenic coastlines and serene meadows. Along the way, you'll learn about the local flora and fauna, as well as the history and culture of the region. Our guides are passionate about the outdoors and will provide insights and stories that will deepen your appreciation for nature.\n\n$19.00"}
                                               </div>
                                               <div
                                                 className={classNames(
@@ -937,18 +940,18 @@ function PlasmicActivities__RenderFunc(props: {
                                       >
                                         <p.PlasmicImg
                                           alt={""}
-                                          className={classNames(sty.img__l1Mh)}
-                                          displayHeight={"100%" as const}
+                                          className={classNames(sty.img__xd5W)}
+                                          displayHeight={"1074px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}
                                           displayMinWidth={"0" as const}
-                                          displayWidth={"100%" as const}
+                                          displayWidth={"auto" as const}
                                           loading={"lazy" as const}
                                           src={{
-                                            src: image8YeOoCnLYw,
-                                            fullWidth: 1280,
-                                            fullHeight: 720,
+                                            src: image24YWcijSoBi,
+                                            fullWidth: 669,
+                                            fullHeight: 446,
                                             aspectRatio: undefined
                                           }}
                                         />

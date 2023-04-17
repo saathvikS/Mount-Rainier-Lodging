@@ -35,6 +35,7 @@ import {
 import NavBar from "../../NavBar"; // plasmic-import: 1afyPt5Gh0q/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax"; // plasmic-import: bozP4lLlAZ/codeComponent
+import FooterTop from "../../FooterTop"; // plasmic-import: GuV31ro_WY/component
 import Footer from "../../Footer"; // plasmic-import: IDlLfPVadLh/component
 import FooterBottom from "../../FooterBottom"; // plasmic-import: rDEJujvel4T/component
 
@@ -45,7 +46,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_mount_rainier_lodging.module.css"; // plasmic-import: x2CpsrHBvuW1zdv5pEkF5Z/projectcss
 import sty from "./PlasmicTermsOfService.module.css"; // plasmic-import: rO2fFHqsDq-/css
 
-import image60EYproaUs from "./images/image6.png"; // plasmic-import: 0eYproaUs/picture
 import mjTangonanOe6QLhRHhhsUnsplashjpgVemFsLYeBbSm from "./images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"; // plasmic-import: vemFS-lYeBbSm/picture
 import coconut1JpgOmLgcR2KgB0Ci from "./images/coconut1Jpg.jpeg"; // plasmic-import: OmLgcR2KgB0Ci/picture
 
@@ -67,6 +67,9 @@ export type PlasmicTermsOfService__OverridesType = {
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
   text?: p.Flex<"div">;
+  ol?: p.Flex<"ol">;
+  li?: p.Flex<"li">;
+  footerTop?: p.Flex<typeof FooterTop>;
   footer?: p.Flex<typeof Footer>;
   footerBottom?: p.Flex<typeof FooterBottom>;
 };
@@ -210,30 +213,6 @@ function PlasmicTermsOfService__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.column___750S5
-                        )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__owQn8)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: image60EYproaUs,
-                            fullWidth: 724,
-                            fullHeight: 484,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
                           sty.column___3Zm5P
                         )}
                       >
@@ -257,7 +236,7 @@ function PlasmicTermsOfService__RenderFunc(props: {
                           >
                             {hasVariant(globalVariants, "screen", "mobileOnly")
                               ? "About our hotel"
-                              : "About our resort"}
+                              : "Terms of Service"}
                           </h2>
                           <div
                             data-plasmic-name={"text"}
@@ -268,9 +247,50 @@ function PlasmicTermsOfService__RenderFunc(props: {
                               sty.text
                             )}
                           >
-                            {hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."
-                              : "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."}
+                            {hasVariant(
+                              globalVariants,
+                              "screen",
+                              "mobileOnly"
+                            ) ? (
+                              "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."
+                            ) : (
+                              <React.Fragment>
+                                <React.Fragment>
+                                  {
+                                    "Welcome to Mount Rainier Lodging! By accessing and using our website, you agree to be bound by the following terms and conditions:\n\n"
+                                  }
+                                </React.Fragment>
+                                {
+                                  <ol
+                                    data-plasmic-name={"ol"}
+                                    data-plasmic-override={overrides.ol}
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.ol,
+                                      sty.ol
+                                    )}
+                                  >
+                                    <li
+                                      data-plasmic-name={"li"}
+                                      data-plasmic-override={overrides.li}
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.li,
+                                        projectcss.__wab_text,
+                                        sty.li
+                                      )}
+                                    >
+                                      {"Use of the website"}
+                                    </li>
+                                  </ol>
+                                }
+                                <React.Fragment>
+                                  {
+                                    "You may use our website for personal, non-commercial purposes only. You may not copy, modify, distribute, transmit, display, or sell any information, content, or materials on our website without our prior written consent.\n\n    2. Reservation policy\nAll reservations are subject to availability and confirmation. By making a reservation, you agree to pay the full amount for your stay and any additional charges incurred during your stay.\n\n    3. Cancellation policy\nOur cancellation policy varies depending on the type of reservation and time of year. Please review our cancellation policy carefully before making a reservation.\n\n    4. Payment policy\nWe accept all major credit cards and require a valid credit card to secure your reservation. Payment is due in full upon check-in.\n\n     5. Guest conduct\nWe expect all guests to conduct themselves in a respectful and responsible manner. Any behavior that disturbs the peace or infringes on the rights of other guests or staff may result in immediate termination of your stay without refund.\n\n    6. Disclaimer of liability\nWe are not responsible for any loss, damage, injury, or other claim arising out of or in connection with your use of our website or your stay at our property.\n\n    7. Indemnification\nYou agree to indemnify and hold us harmless from any and all claims, damages, liabilities, costs, and expenses arising out of or in connection with your use of our website or your stay at our property.\n\n    8. Intellectual property\nAll content, images, and materials on our website are the property of Mount Rainier Lodging and may not be used without our prior written consent.\n\n    9. Governing law and jurisdiction\nThese terms and conditions shall be governed by and construed in accordance with the laws of the state of Washington. Any disputes arising out of or in connection with these terms and conditions shall be resolved in the courts of Pierce County, Washington.\n\n    10. Changes to the terms of service\nWe reserve the right to update or modify these terms and conditions at any time without prior notice. Your continued use of our website constitutes acceptance of any changes to these terms and conditions.\n\nIf you have any questions or concerns about our terms of service, please contact us at info@mtrainierlodging.com."
+                                  }
+                                </React.Fragment>
+                              </React.Fragment>
+                            )}
                           </div>
                         </p.Stack>
                       </div>
@@ -402,6 +422,12 @@ function PlasmicTermsOfService__RenderFunc(props: {
               ) : null}
             </div>
           ) : null}
+          <FooterTop
+            data-plasmic-name={"footerTop"}
+            data-plasmic-override={overrides.footerTop}
+            className={classNames("__wab_instance", sty.footerTop)}
+          />
+
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
           ) ? (
@@ -432,6 +458,9 @@ const PlasmicDescendants = {
     "section1",
     "rowContainer8",
     "text",
+    "ol",
+    "li",
+    "footerTop",
     "footer",
     "footerBottom"
   ],
@@ -439,9 +468,12 @@ const PlasmicDescendants = {
   container: ["container", "navBar", "h1"],
   navBar: ["navBar"],
   h1: ["h1"],
-  section1: ["section1", "rowContainer8", "text"],
-  rowContainer8: ["rowContainer8", "text"],
-  text: ["text"],
+  section1: ["section1", "rowContainer8", "text", "ol", "li"],
+  rowContainer8: ["rowContainer8", "text", "ol", "li"],
+  text: ["text", "ol", "li"],
+  ol: ["ol", "li"],
+  li: ["li"],
+  footerTop: ["footerTop"],
   footer: ["footer"],
   footerBottom: ["footerBottom"]
 } as const;
@@ -457,6 +489,9 @@ type NodeDefaultElementType = {
   section1: "div";
   rowContainer8: "div";
   text: "div";
+  ol: "ol";
+  li: "li";
+  footerTop: typeof FooterTop;
   footer: typeof Footer;
   footerBottom: typeof FooterBottom;
 };
@@ -545,6 +580,9 @@ export const PlasmicTermsOfService = Object.assign(
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
     text: makeNodeComponent("text"),
+    ol: makeNodeComponent("ol"),
+    li: makeNodeComponent("li"),
+    footerTop: makeNodeComponent("footerTop"),
     footer: makeNodeComponent("footer"),
     footerBottom: makeNodeComponent("footerBottom"),
 

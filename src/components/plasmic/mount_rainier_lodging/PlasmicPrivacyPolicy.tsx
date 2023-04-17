@@ -35,6 +35,7 @@ import {
 import NavBar from "../../NavBar"; // plasmic-import: 1afyPt5Gh0q/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax"; // plasmic-import: bozP4lLlAZ/codeComponent
+import FooterTop from "../../FooterTop"; // plasmic-import: GuV31ro_WY/component
 import Footer from "../../Footer"; // plasmic-import: IDlLfPVadLh/component
 import FooterBottom from "../../FooterBottom"; // plasmic-import: rDEJujvel4T/component
 
@@ -45,7 +46,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_mount_rainier_lodging.module.css"; // plasmic-import: x2CpsrHBvuW1zdv5pEkF5Z/projectcss
 import sty from "./PlasmicPrivacyPolicy.module.css"; // plasmic-import: oSo094wahx2/css
 
-import image60EYproaUs from "./images/image6.png"; // plasmic-import: 0eYproaUs/picture
 import mjTangonanOe6QLhRHhhsUnsplashjpgVemFsLYeBbSm from "./images/mjTangonanOe6QLhRHhhsUnsplashjpg.jpeg"; // plasmic-import: vemFS-lYeBbSm/picture
 import coconut1JpgOmLgcR2KgB0Ci from "./images/coconut1Jpg.jpeg"; // plasmic-import: OmLgcR2KgB0Ci/picture
 
@@ -67,6 +67,7 @@ export type PlasmicPrivacyPolicy__OverridesType = {
   section1?: p.Flex<"div">;
   rowContainer8?: p.Flex<"div">;
   text?: p.Flex<"div">;
+  footerTop?: p.Flex<typeof FooterTop>;
   footer?: p.Flex<typeof Footer>;
   footerBottom?: p.Flex<typeof FooterBottom>;
 };
@@ -210,30 +211,6 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.column__qGvse
-                        )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__z2UbG)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: image60EYproaUs,
-                            fullWidth: 724,
-                            fullHeight: 484,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
                           sty.column__aVxYq
                         )}
                       >
@@ -257,7 +234,7 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
                           >
                             {hasVariant(globalVariants, "screen", "mobileOnly")
                               ? "About our hotel"
-                              : "About our resort"}
+                              : "Privacy Policy"}
                           </h2>
                           <div
                             data-plasmic-name={"text"}
@@ -270,7 +247,7 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
                           >
                             {hasVariant(globalVariants, "screen", "mobileOnly")
                               ? "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."
-                              : "Five-star lodging with spectacular scenery, courtesy of Mt. Rainier, our lodge provides the perfect getaway for nature lovers, adventure seekers, and those looking to escape city life. Equipped with various on-site activities, a restaurant, and a wellness center, we are suited to fulfill all our residents' needs and desires."}
+                              : "At Mount Rainier Lodging, we respect your privacy and are committed to protecting the personal information you share with us. This privacy policy outlines the types of personal information we may collect, how we use and protect that information, and your rights regarding your personal information.\n\nInformation we collect:\nWe may collect personal information when you make a reservation, sign up for our newsletter, or contact us through our website. This may include your name, address, email address, phone number, and payment information.\n\nHow we use your information:\nWe may use your personal information to process reservations, respond to inquiries or requests, improve our services, and communicate with you about promotions or special offers.\n\nProtection of your information:\nWe take reasonable measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. We use industry-standard security measures, including encryption and secure socket layer (SSL) technology, to protect your information.\n\nSharing of your information:\nWe do not share your personal information with third parties except as necessary to fulfill your reservation or as required by law.\n\nYour rights:\nYou have the right to access, modify, or delete your personal information at any time. You may also opt-out of receiving promotional emails from us by following the unsubscribe instructions in those emails.\n\nChanges to this policy:\nWe reserve the right to update or change this privacy policy at any time. Any changes will be posted on our website with the revised date.\n\nIf you have any questions or concerns about our privacy policy, please contact us below."}
                           </div>
                         </p.Stack>
                       </div>
@@ -402,6 +379,12 @@ function PlasmicPrivacyPolicy__RenderFunc(props: {
               ) : null}
             </div>
           ) : null}
+          <FooterTop
+            data-plasmic-name={"footerTop"}
+            data-plasmic-override={overrides.footerTop}
+            className={classNames("__wab_instance", sty.footerTop)}
+          />
+
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
           ) ? (
@@ -432,6 +415,7 @@ const PlasmicDescendants = {
     "section1",
     "rowContainer8",
     "text",
+    "footerTop",
     "footer",
     "footerBottom"
   ],
@@ -442,6 +426,7 @@ const PlasmicDescendants = {
   section1: ["section1", "rowContainer8", "text"],
   rowContainer8: ["rowContainer8", "text"],
   text: ["text"],
+  footerTop: ["footerTop"],
   footer: ["footer"],
   footerBottom: ["footerBottom"]
 } as const;
@@ -457,6 +442,7 @@ type NodeDefaultElementType = {
   section1: "div";
   rowContainer8: "div";
   text: "div";
+  footerTop: typeof FooterTop;
   footer: typeof Footer;
   footerBottom: typeof FooterBottom;
 };
@@ -545,6 +531,7 @@ export const PlasmicPrivacyPolicy = Object.assign(
     section1: makeNodeComponent("section1"),
     rowContainer8: makeNodeComponent("rowContainer8"),
     text: makeNodeComponent("text"),
+    footerTop: makeNodeComponent("footerTop"),
     footer: makeNodeComponent("footer"),
     footerBottom: makeNodeComponent("footerBottom"),
 

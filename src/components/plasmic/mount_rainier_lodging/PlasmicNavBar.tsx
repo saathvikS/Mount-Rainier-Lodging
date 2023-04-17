@@ -33,9 +33,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavBarButtons from "../../NavBarButtons"; // plasmic-import: iSh5ehqohY/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
-
-import { useScreenVariants as useScreenVariantsjNh4R65QhDehJ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: jNH4r65QhDehJ/globalVariant
+import SearchBar from "../../SearchBar"; // plasmic-import: RxO7TV-6tk/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -55,10 +53,9 @@ export const PlasmicNavBar__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNavBar__OverridesType = {
   menu?: p.Flex<"div">;
-  menuBar?: p.Flex<"div">;
   img?: p.Flex<typeof p.PlasmicImg>;
   freeBox?: p.Flex<"div">;
-  embedHtml?: p.Flex<typeof Embed>;
+  searchBar?: p.Flex<typeof SearchBar>;
 };
 
 export interface DefaultNavBarProps {
@@ -94,10 +91,6 @@ function PlasmicNavBar__RenderFunc(props: {
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
 
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsjNh4R65QhDehJ()
-  });
-
   return (
     <p.Stack
       as={"div"}
@@ -115,133 +108,120 @@ function PlasmicNavBar__RenderFunc(props: {
         sty.menu
       )}
     >
+      <a
+        className={classNames(projectcss.all, projectcss.a, sty.link__euRiu)}
+        href={`/`}
+      >
+        <p.PlasmicImg
+          data-plasmic-name={"img"}
+          data-plasmic-override={overrides.img}
+          alt={""}
+          className={classNames(sty.img)}
+          displayHeight={"100%" as const}
+          displayMaxHeight={"none" as const}
+          displayMaxWidth={"269px" as const}
+          displayMinHeight={"0" as const}
+          displayMinWidth={"0" as const}
+          displayWidth={"100%" as const}
+          src={{
+            src: mountRanierLodgingLogopngOhYdvXmLh,
+            fullWidth: 351,
+            fullHeight: 343,
+            aspectRatio: undefined
+          }}
+        />
+      </a>
       <p.Stack
         as={"div"}
-        data-plasmic-name={"menuBar"}
-        data-plasmic-override={overrides.menuBar}
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
         hasGap={true}
-        className={classNames(projectcss.all, sty.menuBar)}
+        className={classNames(projectcss.all, sty.freeBox)}
       >
-        <a
-          className={classNames(projectcss.all, projectcss.a, sty.link__euRiu)}
-          href={`/`}
+        <NavBarButtons
+          className={classNames("__wab_instance", sty.navBarButtons___3Yqm)}
         >
-          <p.PlasmicImg
-            data-plasmic-name={"img"}
-            data-plasmic-override={overrides.img}
-            alt={""}
-            className={classNames(sty.img)}
-            displayHeight={"100%" as const}
-            displayMaxHeight={"none" as const}
-            displayMaxWidth={"142px" as const}
-            displayMinHeight={"0" as const}
-            displayMinWidth={"0" as const}
-            displayWidth={"100%" as const}
-            src={{
-              src: mountRanierLodgingLogopngOhYdvXmLh,
-              fullWidth: 351,
-              fullHeight: 343,
-              aspectRatio: undefined
-            }}
-          />
-        </a>
-        <p.Stack
-          as={"div"}
-          data-plasmic-name={"freeBox"}
-          data-plasmic-override={overrides.freeBox}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox)}
+          <a
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__yIjUq
+            )}
+            href={`/rooms`}
+          >
+            {"Rooms"}
+          </a>
+        </NavBarButtons>
+        <NavBarButtons
+          className={classNames("__wab_instance", sty.navBarButtons__s3LnJ)}
         >
-          <NavBarButtons
-            className={classNames("__wab_instance", sty.navBarButtons___3Yqm)}
+          <a
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__ruJoa
+            )}
+            href={`/amenities`}
           >
-            <a
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__yIjUq
-              )}
-              href={`/rooms`}
-            >
-              {"Rooms"}
-            </a>
-          </NavBarButtons>
-          <NavBarButtons
-            className={classNames("__wab_instance", sty.navBarButtons__s3LnJ)}
+            {"Amenities"}
+          </a>
+        </NavBarButtons>
+        <NavBarButtons
+          className={classNames("__wab_instance", sty.navBarButtons__cEzGs)}
+        >
+          <a
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__sriz9
+            )}
+            href={`/acitvities`}
           >
-            <a
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__ruJoa
-              )}
-              href={`/amenities`}
-            >
-              {"Amenities"}
-            </a>
-          </NavBarButtons>
-          <NavBarButtons
-            className={classNames("__wab_instance", sty.navBarButtons__cEzGs)}
+            {"Activities"}
+          </a>
+        </NavBarButtons>
+        <NavBarButtons
+          className={classNames("__wab_instance", sty.navBarButtons___4NMyg)}
+        >
+          <a
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.link__ejf0Q
+            )}
+            href={`/about-us`}
           >
-            <a
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__sriz9
-              )}
-              href={`/acitvities`}
-            >
-              {"Activities"}
-            </a>
-          </NavBarButtons>
-          <NavBarButtons
-            className={classNames("__wab_instance", sty.navBarButtons___4NMyg)}
-          >
-            <a
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__ejf0Q
-              )}
-              href={`/about-us`}
-            >
-              {"About Us"}
-            </a>
-          </NavBarButtons>
-          <Embed
-            data-plasmic-name={"embedHtml"}
-            data-plasmic-override={overrides.embedHtml}
-            className={classNames("__wab_instance", sty.embedHtml)}
-            code={
-              '<script async src="https://cse.google.com/cse.js?cx=503941e8d2aaa4444">\r\n</script>\r\n<div class="gcse-search"></div>' as const
-            }
-          />
-        </p.Stack>
+            {"About Us"}
+          </a>
+        </NavBarButtons>
       </p.Stack>
+      <SearchBar
+        data-plasmic-name={"searchBar"}
+        data-plasmic-override={overrides.searchBar}
+        className={classNames("__wab_instance", sty.searchBar)}
+      />
     </p.Stack>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  menu: ["menu", "menuBar", "img", "freeBox", "embedHtml"],
-  menuBar: ["menuBar", "img", "freeBox", "embedHtml"],
+  menu: ["menu", "img", "freeBox", "searchBar"],
   img: ["img"],
-  freeBox: ["freeBox", "embedHtml"],
-  embedHtml: ["embedHtml"]
+  freeBox: ["freeBox"],
+  searchBar: ["searchBar"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   menu: "div";
-  menuBar: "div";
   img: typeof p.PlasmicImg;
   freeBox: "div";
-  embedHtml: typeof Embed;
+  searchBar: typeof SearchBar;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -304,10 +284,9 @@ export const PlasmicNavBar = Object.assign(
   makeNodeComponent("menu"),
   {
     // Helper components rendering sub-elements
-    menuBar: makeNodeComponent("menuBar"),
     img: makeNodeComponent("img"),
     freeBox: makeNodeComponent("freeBox"),
-    embedHtml: makeNodeComponent("embedHtml"),
+    searchBar: makeNodeComponent("searchBar"),
 
     // Metadata about props expected for PlasmicNavBar
     internalVariantProps: PlasmicNavBar__VariantProps,
