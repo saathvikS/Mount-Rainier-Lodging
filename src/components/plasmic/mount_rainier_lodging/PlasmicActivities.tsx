@@ -476,9 +476,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__oyAb3
                                                   )}
-                                                  href={
-                                                    "https://mount-ranier-lodging.swell.store/buy/8Pwj97Am" as const
-                                                  }
+                                                  href={"" as const}
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
@@ -699,9 +697,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__tjCrd
                                                   )}
-                                                  href={
-                                                    "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
-                                                  }
+                                                  href={"" as const}
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
@@ -920,9 +916,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                     projectcss.__wab_text,
                                                     sty.link__w4Tvi
                                                   )}
-                                                  href={
-                                                    "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
-                                                  }
+                                                  href={"" as const}
                                                   target={"_blank" as const}
                                                 >
                                                   {"See availability"}
