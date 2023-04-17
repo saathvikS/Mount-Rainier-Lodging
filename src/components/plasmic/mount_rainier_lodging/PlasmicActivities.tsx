@@ -466,7 +466,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                 )}
                                                 color={"sand" as const}
                                                 link={
-                                                  "https://mount-ranier-lodging.swell.store/buy/8Pwj97Am" as const
+                                                  "https://mount-ranier-lodging.swell.store/buy/JYRb0cSM" as const
                                                 }
                                               >
                                                 <a
@@ -689,7 +689,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                 )}
                                                 color={"sand" as const}
                                                 link={
-                                                  "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                  "https://mount-ranier-lodging.swell.store/buy/NRvgZWs2" as const
                                                 }
                                               >
                                                 <a
@@ -910,7 +910,7 @@ function PlasmicActivities__RenderFunc(props: {
                                                 )}
                                                 color={"sand" as const}
                                                 link={
-                                                  "https://mount-ranier-lodging.swell.store/buy/tPNGYtaQ" as const
+                                                  "https://mount-ranier-lodging.swell.store/buy/C7xctJye" as const
                                                 }
                                               >
                                                 <a
