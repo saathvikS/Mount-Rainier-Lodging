@@ -576,12 +576,20 @@ function PlasmicActivities__RenderFunc(props: {
                                           className={classNames(
                                             sty.img___8Mzcx
                                           )}
-                                          displayHeight={"1035px" as const}
+                                          displayHeight={"768px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}
                                           displayMinWidth={"0" as const}
-                                          displayWidth={"578px" as const}
+                                          displayWidth={
+                                            hasVariant(
+                                              globalVariants,
+                                              "screen",
+                                              "mobileOnly"
+                                            )
+                                              ? ("754px" as const)
+                                              : ("578px" as const)
+                                          }
                                           loading={"lazy" as const}
                                           src={{
                                             src: image21GoIgZz6H2,
@@ -797,12 +805,20 @@ function PlasmicActivities__RenderFunc(props: {
                                         <p.PlasmicImg
                                           alt={""}
                                           className={classNames(sty.img__rQiba)}
-                                          displayHeight={"875px" as const}
+                                          displayHeight={"704px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}
                                           displayMinWidth={"0" as const}
-                                          displayWidth={"auto" as const}
+                                          displayWidth={
+                                            hasVariant(
+                                              globalVariants,
+                                              "screen",
+                                              "mobileOnly"
+                                            )
+                                              ? ("710px" as const)
+                                              : ("auto" as const)
+                                          }
                                           loading={"lazy" as const}
                                           src={{
                                             src: image23K76GInVm9,
@@ -1018,7 +1034,7 @@ function PlasmicActivities__RenderFunc(props: {
                                         <p.PlasmicImg
                                           alt={""}
                                           className={classNames(sty.img__xd5W)}
-                                          displayHeight={"1074px" as const}
+                                          displayHeight={"791px" as const}
                                           displayMaxHeight={"none" as const}
                                           displayMaxWidth={"100%" as const}
                                           displayMinHeight={"0" as const}

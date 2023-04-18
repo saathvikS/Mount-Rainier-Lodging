@@ -18,7 +18,7 @@
   min-width: 0;
   padding: 0px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .freeBox__wq2EH {
     padding-top: 35px;
   }
@@ -41,7 +41,7 @@
 .columns > :nth-child(2n + 2) {
   width: calc((100% - 2 * 0px) * 6 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .columns {
     width: 100%;
     height: auto;
@@ -50,7 +50,7 @@
     min-width: 0;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 1 * 0px) * 12 / 12);
   }
@@ -68,7 +68,7 @@
   min-width: 0;
   padding: 85px 19px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .column__ubhIv {
     padding: 30px;
   }
@@ -131,7 +131,7 @@
     url("./images/frost67925491920Jpg2.jpeg") top 50% left 50% / cover repeat;
   min-width: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .column__vVofk {
     padding: 30px;
   }
@@ -188,7 +188,7 @@
   color: var(--token-ol7Qe2B4StZTc);
   min-width: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .text__dlSvc {
     font-size: 14px;
     height: auto;

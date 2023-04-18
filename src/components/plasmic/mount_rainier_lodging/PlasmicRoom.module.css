@@ -40,7 +40,7 @@
 .columns > :nth-child(2n + 2) {
   width: calc((100% - 2 * 0px) * 6 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .columns {
     width: 100%;
     height: auto;
@@ -49,7 +49,7 @@
     min-width: 0;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 1 * 0px) * 12 / 12);
   }
@@ -141,7 +141,7 @@
   color: var(--token-ol7Qe2B4StZTc);
   text-align: left;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .slotTargetRoomDescription {
     font-size: 14px;
   }

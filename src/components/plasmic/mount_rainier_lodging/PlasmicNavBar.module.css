@@ -32,19 +32,19 @@
   min-width: 0;
   padding: 0px 16px 16px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .menu {
     width: 100%;
     min-width: 0;
     padding: 4px 32px 32px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .menu > :global(.__wab_flex-container) {
     min-width: 0;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .menu {
     width: 100%;
     min-width: 0;

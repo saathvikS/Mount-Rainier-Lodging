@@ -45,12 +45,12 @@
   padding: 10px 16px;
   border: 1px solid transparent;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .root {
     padding: 0px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .root {
     padding: 0px;
   }
@@ -78,7 +78,7 @@
   font-weight: 400;
   font-size: 17px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 800px) {
   .slotTargetChildren {
     color: var(--token-ol7Qe2B4StZTc);
     letter-spacing: 0.1em;
